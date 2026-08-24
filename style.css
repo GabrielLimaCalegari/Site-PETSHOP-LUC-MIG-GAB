@@ -1,0 +1,709 @@
+/* Resets e Fontes Básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fbf9fe;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #511395;
+    color: #fff;
+    font-size: 0.8rem;
+    padding: 6px 0;
+}
+
+.top-bar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links a {
+    color: #fff;
+    margin-left: 12px;
+    text-decoration: none;
+}
+
+/* Header */
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 2.2rem;
+    color: #511395;
+}
+
+.logo-text h1 {
+    font-size: 1.5rem;
+    color: #511395;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 0.75rem;
+    color: #333;
+}
+
+.red-heart {
+    color: #e74c3c;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 500;
+    font-size: 0.95rem;
+
+}
+
+.nav-menu a.active {
+    color: #511395;
+    border-bottom: 2px solid #511395;
+    padding-bottom: 4px;
+    font-weight: 700;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-actions a {
+    color: #333;
+    font-size: 1.2rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.cart-icon .badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #511395;
+    color: white;
+    font-size: 0.65rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Banner Hero */
+.hero-banner {
+    background-color: #e9e0f7;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h2 {
+    font-size: 2.8rem;
+    color: #3a0078;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.hero-text p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #f37321;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #d96114;
+}
+
+.hero-image img {
+    max-width: 450px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Benefícios */
+.benefits-bar {
+    background-color: #f3ebfc;
+    padding: 20px 0;
+    border-bottom: 1px solid #e1d2f7;
+}
+
+.benefits-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #511395;
+}
+
+.benefit-item i {
+    font-size: 1.5rem;
+}
+
+.benefit-item strong {
+    display: block;
+    font-size: 0.85rem;
+}
+
+.benefit-item p {
+    font-size: 0.75rem;
+    color: #666;
+}
+
+/* Seções Gerais */
+.section-header {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    position: relative;
+}
+
+.section-header h3 {
+    font-size: 1.5rem;
+    color: #3a0078;
+    display: inline-block;
+}
+
+.section-paw {
+    color: #511395;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 5px;
+}
+
+.see-all {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    color: #511395;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Categorias */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.category-card {
+    background: #e9e0f7;
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.card-image {
+    height: 120px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 10px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #3a0078;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* Produtos */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.product-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-img {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.product-img img {
+    max-width: 100%;
+    height: 100px;
+    object-fit: contain;
+}
+
+.product-card h4 {
+    font-size: 0.85rem;
+    color: #333;
+}
+
+.product-sub {
+    font-size: 0.75rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.product-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 0.95rem;
+    color: #111;
+}
+
+.btn-add {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: #4a126b;
+}
+
+.user-avatar {
+    width: 35px;
+    height: 35px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #5b159d;
+
+    display: block;
+}
+
+/* =========================================
+   ÁREA DO USUÁRIO
+========================================= */
+
+.user-area {
+    position: relative;
+}
+
+
+/* Botão do usuário */
+
+.user-button {
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: none;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    color: #333;
+
+    font-size: 22px;
+}
+
+
+.user-button:hover {
+    color: #5b159d;
+}
+
+
+/* Avatar */
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    border: 2px solid #5b159d;
+
+    display: block;
+}
+
+
+/* =========================================
+   MENU DO USUÁRIO
+========================================= */
+
+.user-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+    right: 0;
+
+    width: 170px;
+
+    background: #fff;
+
+    border-radius: 12px;
+
+    padding: 8px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.12);
+
+    border: 1px solid #eee;
+
+    display: none;
+
+    z-index: 1000;
+}
+
+
+
+.user-menu.show {
+    display: block;
+}
+
+
+
+.logout-button {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    padding: 11px 12px;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #333;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+}
+
+
+.logout-button:hover {
+    background: #f3eafa;
+    color: #5b159d;
+}
+
+/* =========================================
+   MODAL DE DESCONEXÃO
+========================================= */
+
+.logout-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(35, 14, 52, 0.55);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+
+    padding: 20px;
+
+}
+
+
+/* Modal aberto */
+
+.logout-modal.show {
+
+    display: flex;
+
+}
+
+
+/* Caixa */
+
+.logout-modal-content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.2);
+
+    animation: aparecerModal 0.25s ease;
+
+}
+
+
+/* Ícone */
+
+.logout-modal-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+
+    background: #eee5fa;
+
+    color: #5b159d;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 26px;
+
+}
+
+
+/* Título */
+
+.logout-modal-content h2 {
+
+    margin-bottom: 10px;
+
+    color: #4d0c91;
+
+    font-size: 25px;
+
+}
+
+
+/* Texto */
+
+.logout-modal-content p {
+
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* Botões */
+
+.logout-modal-buttons {
+
+    display: flex;
+
+    gap: 12px;
+
+}
+
+
+/* Botão cancelar */
+
+.cancel-logout,
+.confirm-logout {
+
+    flex: 1;
+
+    height: 46px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+
+}
+
+
+/* Cancelar */
+
+.cancel-logout {
+
+    background: #f0edf3;
+
+    color: #555;
+
+}
+
+
+.cancel-logout:hover {
+
+    background: #e5e0e9;
+
+}
+
+
+/* Confirmar */
+
+.confirm-logout {
+
+    background: #5b159d;
+
+    color: #fff;
+
+}
+
+
+.confirm-logout:hover {
+
+    background: #48117d;
+
+}
+
+
+/* Animação */
+
+@keyframes aparecerModal {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-15px) scale(0.97);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* Celular */
+
+@media (max-width: 500px) {
+
+    .logout-modal-content {
+
+        padding: 28px 22px;
+
+    }
+
+
+    .logout-modal-buttons {
+
+        flex-direction: column;
+
+    }
+
+}

@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    ```
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <script src="carrinho.js"></script>
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- =========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>PetLândia</h1>
+
+                    <span>
+
+                        Seu pet mais feliz
+
+                        <i class="fa-solid fa-heart red-heart"></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li><a href="index.html" class="active">Início</a></li>
+                    <li><a href="Produtos.html">Produtos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- =========================================
+             ÁREA DO USUÁRIO + CARRINHO
+        ========================================== -->
+
+            <div class="header-actions">
+
+
+                <!-- USUÁRIO -->
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <!-- MENU DA FOTO -->
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARRINHO -->
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+     BANNER DO CACHORRO
+========================================== -->
+
+    <section class="hero-banner">
+
+        <div class="container hero-content">
+
+
+            <div class="hero-text">
+
+                <h2>
+                    Tudo para o<br>
+                    seu melhor amigo
+                </h2>
+
+
+                <p>
+                    Ração, brinquedos, acessórios e muito mais
+                    para o seu pet ficar sempre saudável e feliz!
+                </p>
+
+
+                <a href="#" class="btn-primary">
+
+                    Confira nossos produtos &rarr;
+
+                </a>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="img/CACHORRO2.PNG" alt="Cão e Gato">
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     PROMOÇÕES E QUALIDADES
+========================================== -->
+
+    <section class="benefits-bar">
+
+        <div class="container benefits-grid">
+
+
+            <div class="benefit-item">
+
+                <i class="fa-solid fa-truck-fast"></i>
+
+                <div>
+
+                    <strong>
+                        Frete grátis
+                    </strong>
+
+                    <p>
+                        acima de R$ 99,00
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit-item">
+
+                <i class="fa-regular fa-credit-card"></i>
+
+                <div>
+
+                    <strong>
+                        Parcele em até
+                    </strong>
+
+                    <p>
+                        6x sem juros
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit-item">
+
+                <i class="fa-solid fa-paw"></i>
+
+                <div>
+
+                    <strong>
+                        Produtos de
+                    </strong>
+
+                    <p>
+                        qualidade
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="benefit-item">
+
+                <i class="fa-regular fa-heart"></i>
+
+                <div>
+
+                    <strong>
+                        Cuidado e carinho
+                    </strong>
+
+                    <p>
+                        para o seu pet
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     CATEGORIAS
+========================================== -->
+
+    <section class="categories-section container">
+
+
+        <div class="section-header">
+
+            <h3>
+                Categorias
+            </h3>
+
+            <i class="fa-solid fa-paw section-paw"></i>
+
+        </div>
+
+
+
+        <div class="categories-grid">
+
+
+            <div class="category-card">
+
+                <div class="card-image">
+
+                    <img src="img/Captura de tela 2026-08-17 102132.png" alt="Rações">
+
+                </div>
+
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-bowl-food"></i>
+
+                    Rações
+
+                </div>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <div class="card-image">
+
+                    <img src="img/briquedos2.webp" alt="Brinquedos">
+
+                </div>
+
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-baseball"></i>
+
+                    Brinquedos
+
+                </div>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <div class="card-image">
+
+                    <img src="img/acessorios_para_cachorro_guia_completo_23388_orig.jpg" alt="Acessórios">
+
+                </div>
+
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-ring"></i>
+
+                    Acessórios
+
+                </div>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <div class="card-image">
+
+                    <img src="img/61gC6rME9BL._AC_UF1000,1000_QL80_.jpg" alt="Higiene e Beleza">
+
+                </div>
+
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-soap"></i>
+
+                    Higiene e Beleza
+
+                </div>
+
+            </div>
+
+
+
+            <div class="category-card">
+
+                <div class="card-image">
+
+                    <img src="img/D_NQ_NP_626149-MLB108650189264_032026-O.webp" alt="Saúde">
+
+                </div>
+
+
+                <div class="card-title">
+
+                    <i class="fa-solid fa-briefcase-medical"></i>
+
+                    Saúde
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     PRODUTOS DO SITE
+========================================== -->
+
+    <section class="products-section container">
+
+
+        <div class="section-header">
+
+            <h3>
+                Produtos em destaque
+            </h3>
+
+            <i class="fa-solid fa-paw section-paw"></i>
+
+            <a href="#" class="see-all">
+
+                Ver todos &rarr;
+
+            </a>
+
+        </div>
+
+
+
+        <div class="products-grid">
+
+
+            <!-- PRODUTO 1 -->
+
+            <div class="product-card">
+
+                <div class="product-img">
+
+                    <img src="img/287226-1.webp" alt="Ração Whiskas">
+
+                </div>
+
+
+                <h4>
+                    Ração Whiskas
+                </h4>
+
+
+                <p class="product-sub">
+                    Gatos Adultos
+                </p>
+
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        R$ 89,90
+                    </span>
+
+
+                    <button class="btn-add">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUTO 2 -->
+
+            <div class="product-card">
+
+                <div class="product-img">
+
+                    <img src="img/raçao.jpg" alt="Ração Pedigree">
+
+                </div>
+
+
+                <h4>
+                    Ração Pedigree
+                </h4>
+
+
+                <p class="product-sub">
+                    Cães Adultos
+                </p>
+
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        R$ 79,90
+                    </span>
+
+
+                    <button class="btn-add">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUTO 3 -->
+
+            <div class="product-card">
+
+                <div class="product-img">
+
+                    <img src="img/Brinquedo-Mordedor-Nylon-Cenoura-e-Graveto-Buddy-Toys.png" alt="Brinquedo Mordedor">
+
+                </div>
+
+
+                <h4>
+                    Brinquedo Mordedor
+                </h4>
+
+
+                <p class="product-sub">
+                    Cenoura e Graveto de Borracha
+                </p>
+
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        R$ 29,90
+                    </span>
+
+
+                    <button class="btn-add">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUTO 4 -->
+
+            <div class="product-card">
+
+                <div class="product-img">
+
+                    <img src="img/285244-1.webp" alt="Coleira para Pets">
+
+                </div>
+
+
+                <h4>
+                    Coleira para Pets
+                </h4>
+
+
+                <p class="product-sub">
+                    Ajustável
+                </p>
+
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        R$ 39,90
+                    </span>
+
+
+                    <button class="btn-add">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PRODUTO 5 -->
+
+            <div class="product-card">
+
+                <div class="product-img">
+
+                    <img src="img/1090094-1500-1500.webp" alt="Shampoo Pet Clean">
+
+                </div>
+
+
+                <h4>
+                    Shampoo Pet Clean
+                </h4>
+
+
+                <p class="product-sub">
+                    Neutro
+                </p>
+
+
+                <div class="product-footer">
+
+                    <span class="price">
+                        R$ 34,90
+                    </span>
+
+
+                    <button class="btn-add">
+
+                        <i class="fa-solid fa-cart-shopping"></i>
+
+                        Adicionar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+     MODAL DE DESCONEXÃO
+========================================== -->
+
+    <div id="logout-modal" class="logout-modal">
+
+        <div class="logout-modal-content">
+
+
+            <div class="logout-modal-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+
+            <h2>
+                Desconectar
+            </h2>
+
+
+            <p>
+                Tem certeza que deseja se desconectar
+                da sua conta?
+            </p>
+
+
+            <div class="logout-modal-buttons">
+
+
+                <button type="button" id="cancel-logout" class="cancel-logout">
+
+                    Cancelar
+
+                </button>
+
+
+                <button type="button" id="confirm-logout" class="confirm-logout">
+
+                    Sim, desconectar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           ELEMENTOS
+        ========================================== */
+
+        const userButton =
+            document.getElementById("user-button");
+
+
+        const userMenu =
+            document.getElementById("user-menu");
+
+
+        const logoutButton =
+            document.getElementById("logout-button");
+
+
+        const logoutModal =
+            document.getElementById("logout-modal");
+
+
+        const cancelLogout =
+            document.getElementById("cancel-logout");
+
+
+        const confirmLogout =
+            document.getElementById("confirm-logout");
+
+
+
+        /* =========================================
+           ATUALIZAR USUÁRIO
+        ========================================== */
+
+        function atualizarUsuario() {
+
+
+            const usuarioLogado =
+                localStorage.getItem("usuarioLogado");
+
+
+            if (usuarioLogado === "true") {
+
+
+                userButton.innerHTML = `
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Perfil"
+                    class="user-avatar"
+                >
+
+            `;
+
+
+            } else {
+
+
+                userButton.innerHTML = `
+
+                <i class="fa-regular fa-user"></i>
+
+            `;
+
+            }
+
+        }
+
+
+
+        /* =========================================
+           ABRIR / FECHAR MENU
+        ========================================== */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+
+                event.stopPropagation();
+
+
+                const usuarioLogado =
+                    localStorage.getItem("usuarioLogado");
+
+
+                if (usuarioLogado !== "true") {
+
+
+                    window.location.href =
+                        "login.html";
+
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle("show");
+
+            }
+        );
+
+
+
+        /* =========================================
+           ABRIR MODAL DE DESCONEXÃO
+        ========================================== */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+
+                event.stopPropagation();
+
+
+                userMenu.classList.remove("show");
+
+
+                logoutModal.classList.add("show");
+
+            }
+        );
+
+
+
+        /* =========================================
+           CANCELAR DESCONEXÃO
+        ========================================== */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+
+                logoutModal.classList.remove("show");
+
+            }
+        );
+
+
+
+        /* =========================================
+           CONFIRMAR DESCONEXÃO
+        ========================================== */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+
+                logoutModal.classList.remove("show");
+
+
+                userMenu.classList.remove("show");
+
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+
+        /* =========================================
+           FECHAR MENU AO CLICAR FORA
+        ========================================== */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove("show");
+
+            }
+        );
+
+
+
+        /* =========================================
+           FECHAR MODAL AO CLICAR FORA
+        ========================================== */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+
+                if (
+                    event.target === logoutModal
+                ) {
+
+                    logoutModal.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =========================================
+           INICIALIZAÇÃO
+        ========================================== */
+
+        atualizarUsuario();
+
+
+    </script>
+    ```
+
+</body>
+
+</html>

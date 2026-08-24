@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    ```
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="produtos.css">
+
+    <script src="carrinho.js"></script>
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- =========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>PetLândia</h1>
+
+                    <span>
+
+                        Seu pet mais feliz
+
+                        <i class="fa-solid fa-heart red-heart"></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Produtos.html" class="active">Produtos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- =========================================
+             ÁREA DO USUÁRIO + CARRINHO
+        ========================================== -->
+
+            <div class="header-actions">
+
+
+                <!-- USUÁRIO -->
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <!-- MENU DA FOTO -->
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARRINHO -->
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         CABEÇALHO DA PÁGINA
+    ========================== -->
+
+    <section class="products-hero">
+
+        <div class="container">
+
+            <span class="hero-small-title">
+                PETLÂNDIA
+            </span>
+
+            <h2>
+                Nossos Produtos
+            </h2>
+
+            <p>
+                Encontre tudo o que seu melhor amigo precisa
+                para viver com mais saúde, conforto e diversão.
+            </p>
+
+            <i class="fa-solid fa-paw hero-paw"></i>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ÁREA PRINCIPAL
+    ========================== -->
+
+    <main class="products-area">
+
+        <div class="products-container">
+
+
+            <!-- =========================
+                 ESCOLHA DO ANIMAL
+            ========================== -->
+
+            <section class="animal-selection" id="animalSelection">
+
+                <div class="selection-title">
+
+                    <h2>
+                        O que você está procurando?
+                    </h2>
+
+                    <p>
+                        Primeiro, selecione para qual pet você está procurando.
+                    </p>
+
+                </div>
+
+
+                <div class="animal-buttons">
+
+                    <!-- GATOS -->
+                    <button class="animal-button" data-animal="gatos">
+
+                        <div class="animal-icon">
+                            <i class="fa-solid fa-cat"></i>
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Gatos
+                            </strong>
+
+                            <span>
+                                Produtos para gatos
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- CACHORROS -->
+                    <button class="animal-button" data-animal="cachorros">
+
+                        <div class="animal-icon">
+                            <i class="fa-solid fa-dog"></i>
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Cachorros
+                            </strong>
+
+                            <span>
+                                Produtos para cachorros
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                    <!-- TODOS -->
+                    <button class="animal-button" data-animal="todos">
+
+                        <div class="animal-icon">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Todos
+                            </strong>
+
+                            <span>
+                                Produtos para todos os pets
+                            </span>
+
+                        </div>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =========================
+                 PRODUTOS
+            ========================== -->
+
+            <section class="products-content" id="productsContent" hidden>
+
+
+                <!-- CABEÇALHO DA CATEGORIA -->
+
+                <div class="selected-category-header">
+
+                    <div>
+
+                        <span>
+                            CATEGORIA SELECIONADA
+                        </span>
+
+                        <h2 id="selectedAnimalTitle">
+                            Produtos
+                        </h2>
+
+                    </div>
+
+
+                    <button class="change-animal" id="changeAnimal">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        Trocar categoria
+
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     SUBCATEGORIAS
+                ========================== -->
+
+                <div class="subcategory-area">
+
+                    <button class="subcategory-button" data-category="racoes">
+
+                        <i class="fa-solid fa-bowl-food"></i>
+                        Rações
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="brinquedos">
+
+                        <i class="fa-solid fa-bone"></i>
+                        Brinquedos
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="acessorios">
+
+                        <i class="fa-solid fa-paw"></i>
+                        Acessórios
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="higiene">
+
+                        <i class="fa-solid fa-pump-soap"></i>
+                        Higiene
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="saude">
+
+                        <i class="fa-solid fa-kit-medical"></i>
+                        Saúde
+
+                    </button>
+
+                </div>
+
+
+                <!-- =========================
+                     TÍTULO DA SUBCATEGORIA
+                ========================== -->
+
+                <div class="category-title">
+
+                    <span></span>
+
+                    <div>
+
+                        <h3 id="subcategoryTitle">
+                            Selecione uma categoria
+                        </h3>
+
+                        <i class="fa-solid fa-paw"></i>
+
+                    </div>
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- =========================
+                     LISTA DE PRODUTOS
+                ========================== -->
+
+                <div class="products-grid" id="productsGrid">
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         BOTÃO VOLTAR AO TOPO
+    ========================== -->
+
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /* =========================================
+           PRODUTOS
+        ========================================= */
+
+        const products = {
+
+            gatos: {
+
+                racoes: [
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Gatos Adultos 900g (sabor carne)",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/YETviMAXFTcVZkNiW5VAWoN2t9BihMlBhcSZLhtQwdE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnpz/dC5jb20uYnIvdGh1/bWJzLzQ1LzJjLzFh/Ly0xMzQ5MTI4MDQz/LmpwZw"
+                    },
+
+                    {
+                        name: "Ração Chanin",
+                        description: "Gatos Adultos 10,1kg (sabor peixe)",
+                        price: "R$ 27,90",
+                        image: "https://imgs.search.brave.com/9-6vcfItYxHWvashSXqDVmvPM4G6RyDc6le5aUi6vXs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZXRj/YWVzZWNpYS5mYml0/c3N0YXRpYy5uZXQv/aW1nL3AvcmFjYW8t/Y2hhbmluLW5hdHVy/YWwtcGFyYS1nYXRv/cy1hZHVsdG9zLXNh/Ym9yLXBlaXhlLTEw/LTFrZy04NTU0My8y/NzA0NTItMS5qcGc_/dz0xMjAwJmg9MTIw/MCZ2PTIwMjUwNDI4/MTE0MiZxcz1pZ25v/cmU"
+                    },
+
+                    {
+                        name: "Ração SpecialCat",
+                        description: "Gatos castrados 10,1kg (sabor frango)",
+                        price: "R$ 64,90",
+                        image: "https://imgs.search.brave.com/rzMHUw5BK6qk8KpZFFFvPngcp1nUZFw6igSwxFl1NLM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZXJyYXpvby5j/b20uYnIvdXBsb2Fk/cy8yMDI2LzA1LzUy/NDQud2VicA"
+                    },
+
+                    {
+                        name: "Ração GranPlus",
+                        description: "Gatos Adultos 10,1kg (sabor carne)",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/TBAlbOm9QZoLeqcEFM0lYDVOazz_QzDwtZYz25KvqCc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2FudGluaG9hZ3Jv/cGV0c2hvcC5jb20u/YnIvaW1hZ2UvY2Fj/aGUvY2F0YWxvZy9p/bWFnZW5zLzYwNzEt/NTUweDU1MC5qcGc"
+                    },
+
+                    {
+                        name: "Ração Nutrive",
+                        description: "Gatos filhotes 10,1kg",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.microsoft.com/6mQZO95NfipAV72zs5jJzD70xFuZOwfTrspADa2GjAE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5ODI4MS1NTFU3/NzU0ODQ3ODczMl8w/NzIwMjQtRS53ZWJw"
+                    }
+
+                ],
+
+                brinquedos: [
+
+                    {
+                        name: "Bolinha Colorida",
+                        description: "Bolinha colorida para diversão",
+                        price: "R$ 19,90",
+                        image: "https://imgs.search.brave.com/f9A2vGV73s3JkHGGtuUPUEGjumgsPjSQLV0FuBe7ciM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxSklNYkZJZUwu/anBn"
+                    },
+
+                    {
+                        name: "Varinha Interativa",
+                        description: "Brinquedo com penas",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/sadUH7xk52yDLFevGvl2bVHYNetHiF5POUAl_EwqXdo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYyNTM5NC1NTEI3/MDQ1NzYwNjA2MV8w/NzIwMjMtRS1ib2xp/bmhhLXB1bGEtcHVs/YS1jb20tcGVuYXMt/cGFyYS1nYXRvcy0x/MC1wZWNhcy53ZWJw"
+                    },
+
+                    {
+                        name: "Ratinho de Brinquedo",
+                        description: "Ideal para estimular o instinto",
+                        price: "R$ 14,90",
+                        image: "https://imgs.search.brave.com/Eatl3hknf0NPhMXlbgI-6HKRVxwE0Zi-kMX20ZqdxLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg4NTA5Mi1NTFU3/MjU0MjAwNzYwOF8x/MTIwMjMtRS53ZWJw"
+                    }
+
+                ],
+
+                acessorios: [
+
+                    {
+                        name: "Coleira para Gatos",
+                        description: "Coleira ajustável e confortável",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.brave.com/354wW8OaAtl2lplyTEYxmPRhp8_ZtKCi2QGYcNHIICk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxeWhuQWRobS1M/LmpwZw"
+                    },
+
+                    {
+                        name: "Comedouro para Gatos",
+                        description: "Comedouro prático e resistente",
+                        price: "R$ 59,90",
+                        image: "https://imgs.search.brave.com/mWIn3w_YENAmfo5TznjAgt80I2pfPonXau8kRnESlF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/YnIubXktYmVzdC5j/b20vcHJvZHVjdF9p/bWFnZXMvNTkyMWNk/M2MwYzM2OWY0NWQ5/Njk0MmM5NzAyZWYx/NzguanBnP2l4bGli/PXJhaWxzLTQuMy4x/JnE9NzAmbG9zc2xl/c3M9MCZ3PTgwMCZo/PTgwMCZmaXQ9Y2xp/cCZzPTVjZDhlM2Yy/NjBmZWNhNjExMTI2/ZDQ1OTA4OTcyNDli"
+                    }
+
+                ],
+
+                higiene: [
+
+                    {
+                        name: "Shampoo para Gatos",
+                        description: "Limpeza suave para seu pet",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/Gz-WUVvOjOTB44mte9_meDNCdUZA1eNGoUEiGIGwYeE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb2xp/cGV0LmZiaXRzc3Rh/dGljLm5ldC9pbWcv/cC9zaGFtcG9vLWUt/Y29uZGljaW9uYWRv/ci1wZXQtY2xlYW4t/cGFyYS1nYXRvcy03/MDBtbC05OTcxMC8y/OTM3ODUtMS5qcGc_/dz0yMjAmaD0yNTAm/dj1uby12YWx1ZQ"
+                    },
+
+                    {
+                        name: "Areia Sanitária",
+                        description: "Alta absorção e controle de odores",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/wg_xn2n78ZpfiZTCRva_OZ6eNWOLhcxzLMRDQWGthNM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzY4Mjc0MC9h/cmVpYV9zYW5pdGFy/aWFfbWluZXJhbF94/b19jaGVpcm9fOGtn/XzU5MjdfMV9mNzE2/N2ZhYWQ1ZTYyYTZm/NjFlM2RiNTkwZDQ3/YTFmZS5qcGc"
+                    }
+
+                ],
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Gatos",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/nntRPjfWiMTvS4IBmnnsvdYp3dvEx7ZznrEGHb7Y8XU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/NzE5MDUtTUxCOTAx/MTgwNTg0OTVfMDgy/MDI1LU8ud2VicA"
+                    }
+
+                ]
+
+            },
+
+
+            /* =========================================
+               CACHORROS
+            ========================================= */
+
+            cachorros: {
+
+                racoes: [
+
+                    {
+                        name: "Ração Pedigree",
+                        description: "Cães Adultos 10,1kg",
+                        price: "R$ 79,90",
+                        image: "https://imgs.search.brave.com/v_fCuzOKjGQGGou6EMmlEGTA_PrZajaL7i3a0zl8DGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5OTI0Ny1NTEE5/NTk4MDU3Nzg3Ml8x/MDIwMjUtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Ração Premium",
+                        description: "Alimentação completa para cães",
+                        price: "R$ 89,90",
+                        image: "https://imgs.search.brave.com/bQraEQLT4xDGO6N0eUS5g9CplDvsb4Q3LW_Cic99PSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzMwMHgzMDAvMjQ4/NS8yNDg1MTE4L3By/b2R1dG8vMjE3MjQ3/NzcyLzEyNTQ0XzEt/M2I4eHU3bDcycy5q/cGc"
+                    },
+
+                    {
+                        name: "Ração Premium Plus",
+                        description: "Nutrição completa para cães",
+                        price: "R$ 99,90",
+                        image: "https://imgs.search.brave.com/w2Z6YRLzIQizgj_5orC8BuaGMkuPUemtxM8-P-ckkiY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kY2Ru/LXVzLm1pdGllbmRh/bnViZS5jb20vc3Rv/cmVzLzAwMi8zMTQv/OTYyL3Byb2R1Y3Rz/L2dyYWFuLXBsdXMt/Y2hvaWNlLTE1a2cx/LTVkOTZkNTlkZGZj/ODZmNmY2YTE2Njkx/NjY3ODg5Mjk2LTQ4/MC0wLndlYnA"
+                    },
+
+                    {
+                        name: "Ração NutriPet",
+                        description: "Alimentação equilibrada",
+                        price: "R$ 74,90",
+                        image: "https://imgs.search.brave.com/J1AaIRklP53mF-qLGg8ojvMwJ_3fNwmnZkNlNjcHh7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg5OTIyOS1NTFU3/MjU2NjM4OTU4Ml8x/MTIwMjMtVC5qcGc"
+                    },
+
+                    {
+                        name: "Ração para Filhotes",
+                        description: "Desenvolvida para cães filhotes",
+                        price: "R$ 69,90",
+                        image: "https://imgs.search.brave.com/LQA8mfYIjFRL4q_lnhpN-SmVi8oxt8pG7BOribH0etg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFmWE1haW9jLUwu/anBn"
+                    }
+
+                ],
+
+                brinquedos: [
+
+                    {
+                        name: "Brinquedo Mordedor",
+                        description: "Osso de borracha resistente",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.brave.com/nBvX_dstIzb1ntMRAl2vmf4qNimL-b2zw2eTCZEfrLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dWRv/ZGViaWNoby52dGV4/YXNzZXRzLmNvbS9h/cnF1aXZvcy9pZHMv/MTYyNTUyLTgwMC1h/dXRvP3Y9NjM4NDEw/MTUzODEyNjMwMDAw/JndpZHRoPTgwMCZo/ZWlnaHQ9YXV0byZh/c3BlY3Q9dHJ1ZQ"
+                    },
+
+                    {
+                        name: "Bola para Cachorros",
+                        description: "Ideal para brincar e buscar",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/br7CiyKXZYO_VIBFUTl73tT9kbZ3umqjcYSXMsoL5mE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzQwMHg0MDAvMTAx/Mi8xMDEyNDIxL3By/b2R1dG8vMjI5OTcw/NjY0L2JvbGluaGFz/LTBuZWMzMXhvbHAu/anBn"
+                    },
+
+                    {
+                        name: "Corda para Brincar",
+                        description: "Corda resistente para diversão",
+                        price: "R$ 19,90",
+                        image: "https://imgs.search.brave.com/lUN5s-Y9DQvcvmkg_mrLspy0xwMwQJIJRuRlmant-As/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFDa2R2cUMtZEwu/anBn"
+                    }
+
+                ],
+
+                acessorios: [
+
+                    {
+                        name: "Coleira para cães",
+                        description: "Ajustável e confortável",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/i3gxqkkC618-X-zoeRx4GBhyEYiQQRSZrVhzyzcKoh4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFLUGY1YkpGNUwu/anBn"
+                    },
+
+                    {
+                        name: "Guia para Cachorros",
+                        description: "Resistente e segura",
+                        price: "R$ 44,90",
+                        image: "https://imgs.search.brave.com/coIMcfi_i5_3sRHpFPrcUPH6PqqC_HxDalT7zNdjxXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzY3OTgzOS1NTEE5/NzIyNDQ2NTMyNV8x/MTIwMjUtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Comedouro para Cães",
+                        description: "Resistente e fácil de limpar",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/vAccgPdtqxeGHBgIDdZGhUc_zW24fvpCFKSVzxT-QRQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE4K3RNNVg5Vkwu/anBn"
+                    }
+
+                ],
+
+                higiene: [
+
+                    {
+                        name: "Shampoo Pet Clean",
+                        description: "Neutro para cães",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/dUZHRBGLu8ne-LdD8rQkzYkLFZJRXk03gdQj2rNQlc0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg1MzM4MC1NTEE4/MDQxMjg2MTAxNl8x/MTIwMjQtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Condicionador Pet",
+                        description: "Pelos macios e hidratados",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/z8J4nhcUDPQwbHHO1I1SqHwGq2eXD2KPH0tJP3aUc3o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFZUFdWSnRoTUwu/anBn"
+                    }
+
+                ],
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Cães",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/nVceYfoR-wpASWQLGPmlEIUwYWrkftALyyY3IqCIcLU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZHJvZ2FyYWlhLmNv/bS5ici9fbmV4dC9p/bWFnZT91cmw9aHR0/cHM6Ly9wcm9kdWN0/LWRhdGEucmFpYWRy/b2dhc2lsLmlvL2lt/YWdlcy8xNzUxNDM1/MS53ZWJwJnc9Mzg0/JnE9NzU"
+                    }
+
+                ]
+
+            },
+
+
+            /* =========================================
+               TODOS
+            ========================================= */
+
+            todos: {
+
+                racoes: [
+
+                    {
+                        name: "Ração Pedigree",
+                        description: "Cães Adultos 10,1kg",
+                        price: "R$ 79,90",
+                        image: "https://imgs.search.brave.com/v_fCuzOKjGQGGou6EMmlEGTA_PrZajaL7i3a0zl8DGM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5OTI0Ny1NTEE5/NTk4MDU3Nzg3Ml8x/MDIwMjUtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Ração Premium",
+                        description: "Alimentação completa para cães",
+                        price: "R$ 89,90",
+                        image: "https://imgs.search.brave.com/bQraEQLT4xDGO6N0eUS5g9CplDvsb4Q3LW_Cic99PSs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzMwMHgzMDAvMjQ4/NS8yNDg1MTE4L3By/b2R1dG8vMjE3MjQ3/NzcyLzEyNTQ0XzEt/M2I4eHU3bDcycy5q/cGc"
+                    },
+
+                    {
+                        name: "Ração Premium Plus",
+                        description: "Nutrição completa para cães",
+                        price: "R$ 99,90",
+                        image: "https://imgs.search.brave.com/w2Z6YRLzIQizgj_5orC8BuaGMkuPUemtxM8-P-ckkiY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9kY2Ru/LXVzLm1pdGllbmRh/bnViZS5jb20vc3Rv/cmVzLzAwMi8zMTQv/OTYyL3Byb2R1Y3Rz/L2dyYWFuLXBsdXMt/Y2hvaWNlLTE1a2cx/LTVkOTZkNTlkZGZj/ODZmNmY2YTE2Njkx/NjY3ODg5Mjk2LTQ4/MC0wLndlYnA"
+                    },
+
+                    {
+                        name: "Ração NutriPet",
+                        description: "Alimentação equilibrada",
+                        price: "R$ 74,90",
+                        image: "https://imgs.search.brave.com/J1AaIRklP53mF-qLGg8ojvMwJ_3fNwmnZkNlNjcHh7Q/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg5OTIyOS1NTFU3/MjU2NjM4OTU4Ml8x/MTIwMjMtVC5qcGc"
+                    },
+
+                    {
+                        name: "Ração para Filhotes",
+                        description: "Desenvolvida para cães filhotes",
+                        price: "R$ 69,90",
+                        image: "https://imgs.search.brave.com/LQA8mfYIjFRL4q_lnhpN-SmVi8oxt8pG7BOribH0etg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/ODFmWE1haW9jLUwu/anBn"
+                    },
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Gatos Adultos 900g (sabor carne)",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/YETviMAXFTcVZkNiW5VAWoN2t9BihMlBhcSZLhtQwdE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnpz/dC5jb20uYnIvdGh1/bWJzLzQ1LzJjLzFh/Ly0xMzQ5MTI4MDQz/LmpwZw"
+                    },
+
+                    {
+                        name: "Ração Chanin",
+                        description: "Gatos Adultos 10,1kg (sabor peixe)",
+                        price: "R$ 27,90",
+                        image: "https://imgs.search.brave.com/9-6vcfItYxHWvashSXqDVmvPM4G6RyDc6le5aUi6vXs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wZXRj/YWVzZWNpYS5mYml0/c3N0YXRpYy5uZXQv/aW1nL3AvcmFjYW8t/Y2hhbmluLW5hdHVy/YWwtcGFyYS1nYXRv/cy1hZHVsdG9zLXNh/Ym9yLXBlaXhlLTEw/LTFrZy04NTU0My8y/NzA0NTItMS5qcGc_/dz0xMjAwJmg9MTIw/MCZ2PTIwMjUwNDI4/MTE0MiZxcz1pZ25v/cmU"
+                    },
+
+                    {
+                        name: "Ração SpecialCat",
+                        description: "Gatos castrados 10,1kg (sabor frango)",
+                        price: "R$ 64,90",
+                        image: "https://imgs.search.brave.com/rzMHUw5BK6qk8KpZFFFvPngcp1nUZFw6igSwxFl1NLM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9maWxl/cy50ZXJyYXpvby5j/b20uYnIvdXBsb2Fk/cy8yMDI2LzA1LzUy/NDQud2VicA"
+                    },
+
+                    {
+                        name: "Ração GranPlus",
+                        description: "Gatos Adultos 10,1kg (sabor carne)",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/TBAlbOm9QZoLeqcEFM0lYDVOazz_QzDwtZYz25KvqCc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Y2FudGluaG9hZ3Jv/cGV0c2hvcC5jb20u/YnIvaW1hZ2UvY2Fj/aGUvY2F0YWxvZy9p/bWFnZW5zLzYwNzEt/NTUweDU1MC5qcGc"
+                    },
+
+                    {
+                        name: "Ração Nutrive",
+                        description: "Gatos filhotes 10,1kg",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.brave.com/6mQZO95NfipAV72zs5jJzD70xFuZOwfTrspADa2GjAE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzc5ODI4MS1NTFU3/NzU0ODQ3ODczMl8w/NzIwMjQtRS53ZWJw"
+                    }
+
+                ],
+
+                brinquedos: [
+
+                    {
+                        name: "Bolinha Colorida",
+                        description: "Bolinha colorida para diversão",
+                        price: "R$ 19,90",
+                        image: "https://imgs.search.brave.com/f9A2vGV73s3JkHGGtuUPUEGjumgsPjSQLV0FuBe7ciM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFxSklNYkZJZUwu/anBn"
+                    },
+
+                    {
+                        name: "Varinha Interativa",
+                        description: "Brinquedo com penas",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/sadUH7xk52yDLFevGvl2bVHYNetHiF5POUAl_EwqXdo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzYyNTM5NC1NTEI3/MDQ1NzYwNjA2MV8w/NzIwMjMtRS1ib2xp/bmhhLXB1bGEtcHVs/YS1jb20tcGVuYXMt/cGFyYS1nYXRvcy0x/MC1wZWNhcy53ZWJw"
+                    },
+
+                    {
+                        name: "Ratinho de Brinquedo",
+                        description: "Ideal para estimular o instinto",
+                        price: "R$ 14,90",
+                        image: "https://imgs.search.brave.com/Eatl3hknf0NPhMXlbgI-6HKRVxwE0Zi-kMX20ZqdxLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg4NTA5Mi1NTFU3/MjU0MjAwNzYwOF8x/MTIwMjMtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor",
+                        description: "Osso de borracha resistente",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.brave.com/nBvX_dstIzb1ntMRAl2vmf4qNimL-b2zw2eTCZEfrLc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90dWRv/ZGViaWNoby52dGV4/YXNzZXRzLmNvbS9h/cnF1aXZvcy9pZHMv/MTYyNTUyLTgwMC1h/dXRvP3Y9NjM4NDEw/MTUzODEyNjMwMDAw/JndpZHRoPTgwMCZo/ZWlnaHQ9YXV0byZh/c3BlY3Q9dHJ1ZQ"
+                    },
+
+                    {
+                        name: "Bola para Cachorros",
+                        description: "Ideal para brincar e buscar",
+                        price: "R$ 24,90",
+                        image: "https://imgs.search.brave.com/br7CiyKXZYO_VIBFUTl73tT9kbZ3umqjcYSXMsoL5mE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/YXdzbGkuY29tLmJy/LzQwMHg0MDAvMTAx/Mi8xMDEyNDIxL3By/b2R1dG8vMjI5OTcw/NjY0L2JvbGluaGFz/LTBuZWMzMXhvbHAu/anBn"
+                    },
+
+                    {
+                        name: "Corda para Brincar",
+                        description: "Corda resistente para diversão",
+                        price: "R$ 19,90",
+                        image: "https://imgs.search.brave.com/lUN5s-Y9DQvcvmkg_mrLspy0xwMwQJIJRuRlmant-As/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFDa2R2cUMtZEwu/anBn"
+                    }
+
+                ],
+
+                acessorios: [
+
+                    {
+                        name: "Coleira para cães",
+                        description: "Ajustável e confortável",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/i3gxqkkC618-X-zoeRx4GBhyEYiQQRSZrVhzyzcKoh4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTFLUGY1YkpGNUwu/anBn"
+                    },
+
+                    {
+                        name: "Guia para Cachorros",
+                        description: "Resistente e segura",
+                        price: "R$ 44,90",
+                        image: "https://imgs.search.brave.com/coIMcfi_i5_3sRHpFPrcUPH6PqqC_HxDalT7zNdjxXo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/XzY3OTgzOS1NTEE5/NzIyNDQ2NTMyNV8x/MTIwMjUtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Comedouro para Cães",
+                        description: "Resistente e fácil de limpar",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/vAccgPdtqxeGHBgIDdZGhUc_zW24fvpCFKSVzxT-QRQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NTE4K3RNNVg5Vkwu/anBn"
+                    },
+
+                    {
+                        name: "Coleira para Gatos",
+                        description: "Coleira ajustável e confortável",
+                        price: "R$ 29,90",
+                        image: "https://imgs.search.brave.com/354wW8OaAtl2lplyTEYxmPRhp8_ZtKCi2QGYcNHIICk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzgxeWhuQWRobS1M/LmpwZw"
+                    },
+
+                    {
+                        name: "Comedouro para Gatos",
+                        description: "Comedouro prático e resistente",
+                        price: "R$ 59,90",
+                        image: "https://imgs.search.brave.com/mWIn3w_YENAmfo5TznjAgt80I2pfPonXau8kRnESlF4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/YnIubXktYmVzdC5j/b20vcHJvZHVjdF9p/bWFnZXMvNTkyMWNk/M2MwYzM2OWY0NWQ5/Njk0MmM5NzAyZWYx/NzguanBnP2l4bGli/PXJhaWxzLTQuMy4x/JnE9NzAmbG9zc2xl/c3M9MCZ3PTgwMCZo/PTgwMCZmaXQ9Y2xp/cCZzPTVjZDhlM2Yy/NjBmZWNhNjExMTI2/ZDQ1OTA4OTcyNDli"
+                    }
+
+                ],
+
+                higiene: [
+
+                    {
+                        name: "Shampoo para Gatos",
+                        description: "Limpeza suave para seu pet",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/Gz-WUVvOjOTB44mte9_meDNCdUZA1eNGoUEiGIGwYeE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wb2xp/cGV0LmZiaXRzc3Rh/dGljLm5ldC9pbWcv/cC9zaGFtcG9vLWUt/Y29uZGljaW9uYWRv/ci1wZXQtY2xlYW4t/cGFyYS1nYXRvcy03/MDBtbC05OTcxMC8y/OTM3ODUtMS5qcGc_/dz0yMjAmaD0yNTAm/dj1uby12YWx1ZQ"
+                    },
+
+                    {
+                        name: "Areia Sanitária",
+                        description: "Alta absorção e controle de odores",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/wg_xn2n78ZpfiZTCRva_OZ6eNWOLhcxzLMRDQWGthNM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudGNkbi5jb20u/YnIvaW1nL2ltZ19w/cm9kLzY4Mjc0MC9h/cmVpYV9zYW5pdGFy/aWFfbWluZXJhbF94/b19jaGVpcm9fOGtn/XzU5MjdfMV9mNzE2/N2ZhYWQ1ZTYyYTZm/NjFlM2RiNTkwZDQ3/YTFmZS5qcGc"
+                    },
+
+                    {
+                        name: "Shampoo Pet Clean",
+                        description: "Neutro para cães",
+                        price: "R$ 34,90",
+                        image: "https://imgs.search.brave.com/dUZHRBGLu8ne-LdD8rQkzYkLFZJRXk03gdQj2rNQlc0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9RX05QXzJY/Xzg1MzM4MC1NTEE4/MDQxMjg2MTAxNl8x/MTIwMjQtRS53ZWJw"
+                    },
+
+                    {
+                        name: "Condicionador Pet",
+                        description: "Pelos macios e hidratados",
+                        price: "R$ 39,90",
+                        image: "https://imgs.search.brave.com/z8J4nhcUDPQwbHHO1I1SqHwGq2eXD2KPH0tJP3aUc3o/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFZUFdWSnRoTUwu/anBn"
+                    }
+
+                ],
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Cães",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/nVceYfoR-wpASWQLGPmlEIUwYWrkftALyyY3IqCIcLU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/ZHJvZ2FyYWlhLmNv/bS5ici9fbmV4dC9p/bWFnZT91cmw9aHR0/cHM6Ly9wcm9kdWN0/LWRhdGEucmFpYWRy/b2dhc2lsLmlvL2lt/YWdlcy8xNzUxNDM1/MS53ZWJwJnc9Mzg0/JnE9NzU"
+                    },
+
+                    {
+                        name: "Suplemento para Gatos",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "https://imgs.search.brave.com/nntRPjfWiMTvS4IBmnnsvdYp3dvEx7ZznrEGHb7Y8XU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odHRw/Mi5tbHN0YXRpYy5j/b20vRF9OUV9OUF82/NzE5MDUtTUxCOTAx/MTgwNTg0OTVfMDgy/MDI1LU8ud2VicA"
+                    }
+
+                ]
+
+            }
+
+        };
+
+
+        /* =========================================
+           ELEMENTOS
+        ========================================= */
+
+        const animalButtons =
+            document.querySelectorAll(".animal-button");
+
+        const subcategoryButtons =
+            document.querySelectorAll(".subcategory-button");
+
+        const productsContent =
+            document.getElementById("productsContent");
+
+        const selectedAnimalTitle =
+            document.getElementById("selectedAnimalTitle");
+
+        const subcategoryTitle =
+            document.getElementById("subcategoryTitle");
+
+        const productsGrid =
+            document.getElementById("productsGrid");
+
+        const changeAnimal =
+            document.getElementById("changeAnimal");
+
+        const animalSelection =
+            document.getElementById("animalSelection");
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+
+        /* =========================================
+           VARIÁVEIS
+        ========================================= */
+
+        let selectedAnimal = null;
+        let selectedCategory = null;
+
+
+        /* =========================================
+           NOME DAS CATEGORIAS
+        ========================================= */
+
+        const animalNames = {
+
+            gatos: "Produtos para Gatos",
+
+            cachorros: "Produtos para Cachorros",
+
+            todos: "Produtos para Todos os Pets"
+
+        };
+
+
+        const categoryNames = {
+
+            racoes: "Rações",
+
+            brinquedos: "Brinquedos",
+
+            acessorios: "Acessórios",
+
+            higiene: "Higiene",
+
+            saude: "Saúde"
+
+        };
+
+
+        /* =========================================
+           SELECIONAR ANIMAL
+        ========================================= */
+
+        animalButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const animal =
+                    button.dataset.animal;
+
+
+                /* Remove seleção anterior */
+
+                animalButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                /* Seleciona atual */
+
+                button.classList.add("selected");
+
+
+                selectedAnimal = animal;
+
+
+                /* Atualiza título */
+
+                selectedAnimalTitle.textContent =
+                    animalNames[animal];
+
+
+                /* Mostra conteúdo */
+
+                productsContent.hidden = false;
+
+
+                /* Limpa categoria anterior */
+
+                selectedCategory = null;
+
+                subcategoryButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                subcategoryTitle.textContent =
+                    "Selecione uma categoria";
+
+
+                productsGrid.innerHTML = `
+                    <div class="empty-products">
+                        <i class="fa-solid fa-paw"></i>
+
+                        <h3>
+                            Escolha uma categoria
+                        </h3>
+
+                        <p>
+                            Selecione Rações, Brinquedos,
+                            Acessórios, Higiene ou Saúde.
+                        </p>
+                    </div>
+                `;
+
+
+                /* Desliza suavemente */
+
+                setTimeout(() => {
+
+                    productsContent.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+
+        /* =========================================
+           SELECIONAR SUBCATEGORIA
+        ========================================= */
+
+        subcategoryButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                /* Impede selecionar antes do animal */
+
+                if (!selectedAnimal) {
+
+                    animalSelection.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                    return;
+
+                }
+
+
+                const category =
+                    button.dataset.category;
+
+
+                selectedCategory = category;
+
+
+                /* Remove seleção anterior */
+
+                subcategoryButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                /* Seleciona apenas o atual */
+
+                button.classList.add("selected");
+
+
+                /* Atualiza título */
+
+                subcategoryTitle.textContent =
+                    categoryNames[category];
+
+
+                /* Carrega produtos */
+
+                renderProducts();
+
+
+                /* Desliza suavemente */
+
+                setTimeout(() => {
+
+                    productsGrid.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+
+        /* =========================================
+           RENDERIZAR PRODUTOS
+        ========================================= */
+
+        /* =========================================
+   RENDERIZAR PRODUTOS
+========================================= */
+
+        function renderProducts() {
+
+            productsGrid.innerHTML = "";
+
+
+            if (!selectedAnimal || !selectedCategory) {
+                return;
+            }
+
+
+            const productList =
+                products[selectedAnimal][selectedCategory];
+
+
+            if (!productList || productList.length === 0) {
+
+                productsGrid.innerHTML = `
+
+            <div class="empty-products">
+
+                <i class="fa-solid fa-box-open"></i>
+
+                <h3>
+                    Nenhum produto encontrado
+                </h3>
+
+                <p>
+                    Em breve teremos novidades
+                    nesta categoria.
+                </p>
+
+            </div>
+
+        `;
+
+                return;
+            }
+
+
+            productList.forEach((product, index) => {
+
+                const card =
+                    document.createElement("article");
+
+
+                card.className = "product-card";
+
+
+                /*
+                   ID único do produto.
+        
+                   Usamos nome + descrição para que
+                   o mesmo produto seja reconhecido
+                   mesmo se aparecer em "Todos".
+                */
+
+                const productId =
+                    (
+                        product.name +
+                        "-" +
+                        product.description
+                    )
+                        .toLowerCase()
+                        .normalize("NFD")
+                        .replace(/[\u0300-\u036f]/g, "")
+                        .replace(/[^a-z0-9]+/g, "-")
+                        .replace(/^-|-$/g, "");
+
+
+                /*
+                   Converte:
+        
+                   R$ 24,90
+        
+                   para:
+        
+                   24.90
+                */
+
+                const numericPrice =
+                    parseFloat(
+                        product.price
+                            .replace("R$", "")
+                            .replace(/\./g, "")
+                            .replace(",", ".")
+                            .trim()
+                    );
+
+
+                card.innerHTML = `
+
+            <div class="product-image">
+
+                <img
+                    src="${product.image}"
+                    alt="${product.name}"
+                    loading="lazy"
+                >
+
+            </div>
+
+
+            <div class="product-info">
+
+                <h3>
+                    ${product.name}
+                </h3>
+
+                <p>
+                    ${product.description}
+                </p>
+
+            </div>
+
+
+            <div class="product-bottom">
+
+                <strong>
+                    ${product.price}
+                </strong>
+
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-product-id="${productId}"
+                >
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Adicionar
+
+                </button>
+
+            </div>
+
+        `;
+
+
+                productsGrid.appendChild(card);
+
+
+                /*
+                   BOTÃO ADICIONAR
+                */
+
+                const addButton =
+                    card.querySelector(".add-cart");
+
+
+                addButton.addEventListener(
+                    "click",
+                    function () {
+
+                        /*
+                           Envia o produto para
+                           o sistema do carrinho.
+                        */
+
+                        addToCart({
+
+                            id: productId,
+
+                            name: product.name,
+
+                            description:
+                                product.description,
+
+                            price: numericPrice,
+
+                            image: product.image
+
+                        });
+
+
+                        /*
+                           Efeito visual no botão
+                        */
+
+                        const originalHTML =
+                            addButton.innerHTML;
+
+
+                        addButton.innerHTML = `
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Adicionado!
+
+                `;
+
+
+                        addButton.classList.add(
+                            "added"
+                        );
+
+
+                        /*
+                           Volta ao normal depois
+                        */
+
+                        setTimeout(() => {
+
+                            addButton.innerHTML =
+                                originalHTML;
+
+                            addButton.classList.remove(
+                                "added"
+                            );
+
+                        }, 1200);
+
+                    }
+                );
+
+            });
+
+        }
+
+        /* =========================================
+           TROCAR ANIMAL
+        ========================================= */
+
+        changeAnimal.addEventListener("click", () => {
+
+            productsContent.hidden = true;
+
+
+            selectedAnimal = null;
+
+            selectedCategory = null;
+
+
+            animalButtons.forEach(button => {
+
+                button.classList.remove("selected");
+
+            });
+
+
+            subcategoryButtons.forEach(button => {
+
+                button.classList.remove("selected");
+
+            });
+
+
+            productsGrid.innerHTML = "";
+
+
+            animalSelection.scrollIntoView({
+
+                behavior: "smooth",
+
+                block: "center"
+
+            });
+
+        });
+
+
+        /* =========================================
+           BOTÃO VOLTAR AO TOPO
+        ========================================= */
+
+        window.addEventListener("scroll", () => {
+
+            if (window.scrollY > 500) {
+
+                backToTop.classList.add("show");
+
+            } else {
+
+                backToTop.classList.remove("show");
+
+            }
+
+        });
+
+
+        backToTop.addEventListener("click", () => {
+
+            window.scrollTo({
+
+                top: 0,
+
+                behavior: "smooth"
+
+            });
+
+        });
+
+        const userButton =
+            document.getElementById("user-button");
+
+        const userMenu =
+            document.getElementById("user-menu");
+
+        const logoutButton =
+            document.getElementById("logout-button");
+
+        const logoutModal =
+            document.getElementById("logout-modal");
+
+        const cancelLogout =
+            document.getElementById("cancel-logout");
+
+        const confirmLogout =
+            document.getElementById("confirm-logout");
+
+
+        /* ATUALIZAR USUÁRIO */
+
+        function atualizarUsuario() {
+
+            const usuarioLogado =
+                localStorage.getItem("usuarioLogado");
+
+
+            if (usuarioLogado === "true") {
+
+                userButton.innerHTML = `
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Perfil"
+                    class="user-avatar"
+                >
+
+            `;
+
+            } else {
+
+                userButton.innerHTML = `
+
+                <i class="fa-regular fa-user"></i>
+
+            `;
+
+            }
+
+        }
+
+
+        /* ABRIR MENU */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+
+                const usuarioLogado =
+                    localStorage.getItem("usuarioLogado");
+
+
+                if (usuarioLogado !== "true") {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle("show");
+
+            }
+        );
+
+
+        /* ABRIR MODAL */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                userMenu.classList.remove("show");
+
+                logoutModal.classList.add("show");
+
+            }
+        );
+
+
+        /* CANCELAR */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+                logoutModal.classList.remove("show");
+
+            }
+        );
+
+
+        /* CONFIRMAR */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+                logoutModal.classList.remove("show");
+
+                userMenu.classList.remove("show");
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+        /* CLICAR FORA */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove("show");
+
+            }
+        );
+
+
+        /* FECHAR MODAL */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === logoutModal) {
+
+                    logoutModal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        atualizarUsuario();
+
+
+    </script>
+
+</body>
+
+</html>
