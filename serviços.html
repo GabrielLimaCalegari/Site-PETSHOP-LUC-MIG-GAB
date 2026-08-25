@@ -1,0 +1,1470 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="serviços.css">
+
+    <script src="carrinho.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- =========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>PetLândia</h1>
+
+                    <span>
+                        Seu pet mais feliz
+                        <i class="fa-solid fa-heart red-heart"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <ul>
+
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="Produtos.html">Produtos</a></li>
+                        <li><a href="serviços.html" class="active">Serviços</a></li>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+
+                    </ul>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- USUÁRIO + CARRINHO -->
+
+            <div class="header-actions">
+
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+     HERO
+========================================== -->
+
+    <main>
+
+
+        <section class="servicos-hero">
+
+            <div class="servicos-hero-content">
+
+
+                <div class="servicos-hero-text">
+
+                    <span class="hero-tag">
+                        <i class="fa-solid fa-paw"></i>
+                        Parceiros PetLândia
+                    </span>
+
+
+                    <h1>
+                        PetLândia
+                        <br>
+                        <span>Perto de Você</span>
+                    </h1>
+
+
+                    <p>
+                        Encontre veterinários, locais de banho e tosa
+                        e lojas parceiras para cuidar do seu pet
+                        perto de onde você está.
+                    </p>
+
+
+                    <div class="hero-benefits">
+
+
+                        <div class="hero-benefit">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                            <div>
+                                <strong>
+                                    Parceiros verificados
+                                </strong>
+
+                                <span>
+                                    Empresas afiliadas à PetLândia
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-benefit">
+
+                            <i class="fa-regular fa-star"></i>
+
+                            <div>
+                                <strong>
+                                    Avaliações reais
+                                </strong>
+
+                                <span>
+                                    Experiências de outros tutores
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div class="hero-benefit">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <div>
+                                <strong>
+                                    Perto de você
+                                </strong>
+
+                                <span>
+                                    Encontre opções na sua região
+                                </span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="servicos-hero-image">
+
+                    <div class="hero-map-shape">
+
+                        <div class="map-grid"></div>
+
+
+                        <div class="map-pin pin-1">
+                            <i class="fa-solid fa-house-medical"></i>
+                        </div>
+
+                        <div class="map-pin pin-2">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+
+                        <div class="map-pin pin-3">
+                            <i class="fa-solid fa-store"></i>
+                        </div>
+
+                        <div class="map-pin pin-4">
+                            <i class="fa-solid fa-paw"></i>
+                        </div>
+
+
+                        <div class="pet-illustration">
+
+                            <i class="fa-solid fa-dog"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         BUSCA
+    ========================================== -->
+
+        <section class="busca-section">
+
+            <div class="busca-card">
+
+
+                <!-- LOCALIZAÇÃO -->
+
+                <div class="busca-local">
+
+                    <h2>
+                        Onde você está?
+                    </h2>
+
+
+                    <button type="button" class="location-button">
+
+                        <i class="fa-solid fa-location-crosshairs"></i>
+
+                        Usar minha localização
+
+                    </button>
+
+
+                    <span class="ou-text">
+                        ou digite seu CEP ou cidade
+                    </span>
+
+
+                    <div class="search-location">
+
+                        <input type="text" placeholder="Digite seu CEP ou cidade" id="location-input">
+
+                        <button type="button" class="search-icon-button">
+
+                            <i class="fa-solid fa-magnifying-glass"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CATEGORIAS -->
+
+                <div class="busca-tipo">
+
+                    <h2>
+                        O que você procura?
+                    </h2>
+
+
+                    <div class="service-options">
+
+                        <button type="button" class="service-option active" data-service="Veterinário">
+
+                            <i class="fa-solid fa-house-medical"></i>
+
+                            <span>
+                                Veterinário
+                            </span>
+
+                        </button>
+
+
+                        <button type="button" class="service-option" data-service="Banho e Tosa">
+
+                            <i class="fa-solid fa-scissors"></i>
+
+                            <span>
+                                Banho e Tosa
+                            </span>
+
+                        </button>
+
+
+                        <button type="button" class="service-option" data-service="Loja de Produtos">
+
+                            <i class="fa-solid fa-store"></i>
+
+                            <span>
+                                Loja de Produtos
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BOTÃO -->
+
+                <div class="busca-action">
+
+                    <button type="button" class="btn-buscar" id="btnBuscarParceiros">
+
+                        Buscar parceiros
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         PARCEIROS
+    ========================================== -->
+
+        <section class="parceiros-section">
+
+
+            <div class="parceiros-header">
+
+                <div>
+
+                    <h2>
+
+                        <i class="fa-regular fa-star"></i>
+
+                        Parceiros próximos de você
+
+                    </h2>
+
+                    <p>
+                        Mostrando parceiros verificados
+                        perto da sua localização.
+                    </p>
+
+                </div>
+
+
+                <select class="ordenar-select" id="ordenarParceiros">
+
+                    <option>
+                        Ordenar por: Mais próximos
+                    </option>
+
+                    <option>
+                        Melhor avaliação
+                    </option>
+
+                    <option>
+                        Mais populares
+                    </option>
+
+                </select>
+
+            </div>
+
+
+
+            <div class="parceiros-layout">
+
+
+                <!-- LISTA -->
+
+                <div class="parceiros-lista">
+
+
+                    <!-- PARCEIRO 1 -->
+
+                    <article class="parceiro-card" data-distance="1.2" data-rating="4.8" data-reviews="128"
+                        data-name="Clínica Vet Vida"
+                        data-summary="Clínica veterinária parceira da PetLândia, especializada em cuidados preventivos e acompanhamento da saúde de cães e gatos."
+                        data-services="Consultas • Vacinas • Exames" data-hours="Aberto até 18:00">
+
+
+                        <div class="parceiro-imagem parceiro-veterinario">
+
+                            <i class="fa-solid fa-house-medical"></i>
+
+                        </div>
+
+
+                        <div class="parceiro-info">
+
+
+                            <span class="parceiro-selo">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Parceiro PetLândia
+
+                            </span>
+
+
+                            <h3>
+                                Clínica Vet Vida
+                            </h3>
+
+
+                            <div class="avaliacao">
+
+                                <span>
+                                    ★ 4,8
+                                </span>
+
+                                <small>
+                                    (128 avaliações)
+                                </small>
+
+                            </div>
+
+
+                            <p class="servicos-disponiveis">
+
+                                <i class="fa-solid fa-user-doctor"></i>
+
+                                Veterinário • Consultas • Vacinas • Exames
+
+                            </p>
+
+
+                            <div class="parceiro-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    1,2 km de você
+                                </span>
+
+                                <span class="aberto">
+                                    Aberto até 18:00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="parceiro-actions">
+
+                            <button class="btn-detalhes">
+                                Ver detalhes
+                            </button>
+
+                            <button class="btn-rota">
+                                Como chegar
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <div class="parceiro-detalhes" aria-hidden="true"></div>
+
+
+                    <!-- PARCEIRO 2 -->
+
+                    <article class="parceiro-card" data-distance="2.1" data-rating="4.7" data-reviews="96"
+                        data-name="PetStyle Banho & Tosa"
+                        data-summary="Espaço especializado em higiene e cuidados estéticos para pets, oferecendo banho, tosa e tratamentos de hidratação."
+                        data-services="Banho • Tosa • Higiene • Hidratação" data-hours="Aberto até 17:30">
+
+
+                        <div class="parceiro-imagem parceiro-tosa">
+
+                            <i class="fa-solid fa-scissors"></i>
+
+                        </div>
+
+
+                        <div class="parceiro-info">
+
+
+                            <span class="parceiro-selo">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Parceiro PetLândia
+
+                            </span>
+
+
+                            <h3>
+                                PetStyle Banho & Tosa
+                            </h3>
+
+
+                            <div class="avaliacao">
+
+                                <span>
+                                    ★ 4,7
+                                </span>
+
+                                <small>
+                                    (96 avaliações)
+                                </small>
+
+                            </div>
+
+
+                            <p class="servicos-disponiveis">
+
+                                <i class="fa-solid fa-paw"></i>
+
+                                Banho • Tosa • Higiene • Hidratação
+
+                            </p>
+
+
+                            <div class="parceiro-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    2,1 km de você
+                                </span>
+
+                                <span class="aberto">
+                                    Aberto até 17:30
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="parceiro-actions">
+
+                            <button class="btn-detalhes">
+                                Ver detalhes
+                            </button>
+
+                            <button class="btn-rota">
+                                Como chegar
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <div class="parceiro-detalhes" aria-hidden="true"></div>
+
+
+                    <!-- PARCEIRO 3 -->
+
+                    <article class="parceiro-card" data-distance="2.4" data-rating="4.6" data-reviews="210"
+                        data-name="Mundo Animal Pet Shop"
+                        data-summary="Pet shop completo com produtos para o dia a dia do seu pet, incluindo rações, brinquedos e acessórios."
+                        data-services="Rações • Brinquedos • Acessórios" data-hours="Aberto até 19:00">
+
+
+                        <div class="parceiro-imagem parceiro-loja">
+
+                            <i class="fa-solid fa-store"></i>
+
+                        </div>
+
+
+                        <div class="parceiro-info">
+
+
+                            <span class="parceiro-selo">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                                Parceiro PetLândia
+
+                            </span>
+
+
+                            <h3>
+                                Mundo Animal Pet Shop
+                            </h3>
+
+
+                            <div class="avaliacao">
+
+                                <span>
+                                    ★ 4,6
+                                </span>
+
+                                <small>
+                                    (210 avaliações)
+                                </small>
+
+                            </div>
+
+
+                            <p class="servicos-disponiveis">
+
+                                <i class="fa-solid fa-basket-shopping"></i>
+
+                                Rações • Brinquedos • Acessórios
+
+                            </p>
+
+
+                            <div class="parceiro-meta">
+
+                                <span>
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    2,4 km de você
+                                </span>
+
+                                <span class="aberto">
+                                    Aberto até 19:00
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="parceiro-actions">
+
+                            <button class="btn-detalhes">
+                                Ver detalhes
+                            </button>
+
+                            <button class="btn-rota">
+                                Como chegar
+                            </button>
+
+                        </div>
+
+                    </article>
+
+                    <div class="parceiro-detalhes" aria-hidden="true"></div>
+
+                </div>
+
+
+
+                <!-- MAPA -->
+
+                <div class="mapa-container">
+
+                    <div class="mapa">
+
+                        <div class="mapa-grid"></div>
+
+
+                        <div class="mapa-label label-1">
+                            Jardim América
+                        </div>
+
+                        <div class="mapa-label label-2">
+                            Vila Nova
+                        </div>
+
+                        <div class="mapa-label label-3">
+                            Jardim Itália
+                        </div>
+
+                        <div class="mapa-label label-4">
+                            Parque das Árvores
+                        </div>
+
+
+                        <div class="mapa-ponto mapa-ponto-1">
+
+                            <i class="fa-solid fa-house-medical"></i>
+
+                        </div>
+
+
+                        <div class="mapa-ponto mapa-ponto-2">
+
+                            <i class="fa-solid fa-scissors"></i>
+
+                        </div>
+
+
+                        <div class="mapa-ponto mapa-ponto-3">
+
+                            <i class="fa-solid fa-store"></i>
+
+                        </div>
+
+
+                        <div class="mapa-localizacao">
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="mapa-confianca">
+
+                        <div class="mapa-confianca-icon">
+
+                            <i class="fa-solid fa-shield-heart"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <strong>
+                                Só parceiros de confiança
+                            </strong>
+
+                            <p>
+                                Todos os estabelecimentos são
+                                parceiros verificados da PetLândia.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================================
+         POR QUE USAR
+    ========================================== -->
+
+        <section class="confianca-section">
+
+            <div class="container">
+
+                <div class="confianca-header">
+
+                    <h2>
+                        Por que escolher os Parceiros PetLândia?
+                    </h2>
+
+                </div>
+
+
+                <div class="confianca-grid">
+
+
+                    <div class="confianca-item">
+
+                        <i class="fa-solid fa-shield-heart"></i>
+
+                        <div>
+
+                            <h3>
+                                Parceiros verificados
+                            </h3>
+
+                            <p>
+                                Trabalhamos somente com empresas
+                                confiáveis e de qualidade.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="confianca-item">
+
+                        <i class="fa-regular fa-star"></i>
+
+                        <div>
+
+                            <h3>
+                                Avaliações reais
+                            </h3>
+
+                            <p>
+                                Veja a experiência de outros
+                                tutores com os estabelecimentos.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="confianca-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+
+                            <h3>
+                                Perto de você
+                            </h3>
+
+                            <p>
+                                Encontre os melhores serviços
+                                na sua região.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="confianca-item">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        <div>
+
+                            <h3>
+                                O melhor para seu pet
+                            </h3>
+
+                            <p>
+                                Parceiros que cuidam dos animais
+                                tanto quanto você.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+     MODAL DE DESCONEXÃO
+========================================== -->
+
+    <div id="logout-modal" class="logout-modal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-modal-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+
+            <h2>
+                Desconectar
+            </h2>
+
+
+            <p>
+                Tem certeza que deseja se desconectar
+                da sua conta?
+            </p>
+
+
+            <div class="logout-modal-buttons">
+
+                <button type="button" id="cancel-logout" class="cancel-logout">
+                    Cancelar
+                </button>
+
+
+                <button type="button" id="confirm-logout" class="confirm-logout">
+                    Sim, desconectar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+     MODAL - FUNÇÃO EM DESENVOLVIMENTO
+========================================== -->
+
+    <div id="beta-modal" class="beta-modal">
+
+        <div class="beta-modal-content">
+
+            <div class="beta-modal-icon">
+
+                <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+
+            <h2>
+                Função em desenvolvimento
+            </h2>
+
+
+            <p>
+                A busca por parceiros ainda não está disponível.
+                Esta é uma versão beta do site e essa função será
+                adicionada em uma próxima atualização.
+            </p>
+
+
+            <button type="button" id="close-beta-modal" class="close-beta-modal">
+
+                Entendi
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+    <script>
+
+        const userButton =
+            document.getElementById("user-button");
+
+        const userMenu =
+            document.getElementById("user-menu");
+
+        const logoutButton =
+            document.getElementById("logout-button");
+
+        const logoutModal =
+            document.getElementById("logout-modal");
+
+        const cancelLogout =
+            document.getElementById("cancel-logout");
+
+        const confirmLogout =
+            document.getElementById("confirm-logout");
+
+
+        /* ATUALIZAR USUÁRIO */
+
+        function atualizarUsuario() {
+
+            const usuarioLogado =
+                localStorage.getItem("usuarioLogado");
+
+
+            if (usuarioLogado === "true") {
+
+                userButton.innerHTML = `
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Perfil"
+                    class="user-avatar"
+                >
+
+            `;
+
+            } else {
+
+                userButton.innerHTML = `
+
+                <i class="fa-regular fa-user"></i>
+
+            `;
+
+            }
+
+        }
+
+
+        /* ABRIR MENU */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+
+                const usuarioLogado =
+                    localStorage.getItem("usuarioLogado");
+
+
+                if (usuarioLogado !== "true") {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle("show");
+
+            }
+        );
+
+
+        /* ABRIR MODAL */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                userMenu.classList.remove("show");
+
+                logoutModal.classList.add("show");
+
+            }
+        );
+
+
+        /* CANCELAR */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+                logoutModal.classList.remove("show");
+
+            }
+        );
+
+
+        /* CONFIRMAR */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+                logoutModal.classList.remove("show");
+
+                userMenu.classList.remove("show");
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+        /* CLICAR FORA */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove("show");
+
+            }
+        );
+
+
+        /* FECHAR MODAL */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === logoutModal) {
+
+                    logoutModal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+        /* =========================================
+           SELEÇÃO DOS SERVIÇOS
+        ========================================= */
+
+        const serviceOptions =
+            document.querySelectorAll(".service-option");
+
+        let servicoSelecionado = "Veterinário";
+
+        serviceOptions.forEach(function (option) {
+
+            option.addEventListener("click", function () {
+
+                serviceOptions.forEach(function (item) {
+                    item.classList.remove("active");
+                });
+
+                option.classList.add("active");
+                servicoSelecionado = option.dataset.service;
+
+            });
+
+        });
+
+
+        /* =========================================
+           MODAL DE FUNÇÃO EM DESENVOLVIMENTO
+        ========================================= */
+
+        const btnBuscarParceiros =
+            document.getElementById("btnBuscarParceiros");
+
+        const betaModal =
+            document.getElementById("beta-modal");
+
+        const closeBetaModal =
+            document.getElementById("close-beta-modal");
+
+        function abrirBetaModal() {
+            betaModal.classList.add("show");
+        }
+
+        function fecharBetaModal() {
+            betaModal.classList.remove("show");
+        }
+
+        btnBuscarParceiros.addEventListener("click", abrirBetaModal);
+        closeBetaModal.addEventListener("click", fecharBetaModal);
+
+        betaModal.addEventListener("click", function (event) {
+            if (event.target === betaModal) {
+                fecharBetaModal();
+            }
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape" && betaModal.classList.contains("show")) {
+                fecharBetaModal();
+            }
+        });
+
+
+        /* =========================================
+           ORDENAÇÃO DOS PARCEIROS
+        ========================================= */
+
+        const ordenarParceiros =
+            document.getElementById("ordenarParceiros");
+
+        const parceirosLista =
+            document.querySelector(".parceiros-lista");
+
+        function limparDetalhesDaLista() {
+
+            parceirosLista
+                .querySelectorAll(".parceiro-detalhes")
+                .forEach(function (detalhe) {
+                    detalhe.remove();
+                });
+        }
+
+        function ordenarListaParceiros() {
+
+            /*
+             * Guarda a posição atual da página.
+             * Assim a troca do select nunca faz a tela descer.
+             */
+            const scrollAtual = window.scrollY;
+
+            const cards = Array.from(
+                parceirosLista.querySelectorAll(".parceiro-card")
+            );
+
+            /* Remove os painéis antigos antes de reorganizar.
+               Isso evita que espaços vazios sejam criados na lista. */
+            limparDetalhesDaLista();
+
+            cards.sort(function (a, b) {
+
+                const distanceA = parseFloat(a.dataset.distance);
+                const distanceB = parseFloat(b.dataset.distance);
+                const ratingA = parseFloat(a.dataset.rating);
+                const ratingB = parseFloat(b.dataset.rating);
+                const reviewsA = parseInt(a.dataset.reviews, 10);
+                const reviewsB = parseInt(b.dataset.reviews, 10);
+
+                switch (ordenarParceiros.value) {
+
+                    case "Melhor avaliação":
+                        return ratingB - ratingA;
+
+                    case "Mais populares":
+                        return reviewsB - reviewsA;
+
+                    default:
+                        return distanceA - distanceB;
+                }
+            });
+
+            cards.forEach(function (card) {
+
+                parceirosLista.appendChild(card);
+
+                const detalhe = criarDetalhe(card);
+
+                prepararDetalhes(card, detalhe);
+            });
+
+            /* Impede qualquer alteração visual da posição da página. */
+            window.scrollTo({
+                top: scrollAtual,
+                left: 0,
+                behavior: "instant"
+            });
+        }
+
+
+        /* =========================================
+           DETALHES DOS PARCEIROS
+        ========================================= */
+
+        function fecharTodosOsDetalhes() {
+
+            document
+                .querySelectorAll(".parceiro-detalhes.show")
+                .forEach(function (item) {
+                    item.classList.remove("show");
+                    item.setAttribute("aria-hidden", "true");
+                    item.innerHTML = "";
+                });
+        }
+
+        function prepararDetalhes(card, detalhe) {
+
+            const botaoDetalhes =
+                card.querySelector(".btn-detalhes");
+
+            const botaoRota =
+                card.querySelector(".btn-rota");
+
+            botaoDetalhes.addEventListener("click", function () {
+
+                const aberto = detalhe.classList.contains("show");
+
+                fecharTodosOsDetalhes();
+
+                if (aberto) {
+                    return;
+                }
+
+                detalhe.innerHTML = `
+                    <div class="detalhes-inner">
+
+                        <div class="detalhes-topo">
+
+                            <div class="detalhes-titulo-area">
+                                <span class="detalhes-label">
+                                    <i class="fa-solid fa-paw"></i>
+                                    SOBRE O PARCEIRO
+                                </span>
+
+                                <h3>${card.dataset.name}</h3>
+                            </div>
+
+                            <button
+                                type="button"
+                                class="fechar-detalhes"
+                                aria-label="Fechar detalhes"
+                                title="Fechar detalhes"
+                            >
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+
+                        </div>
+
+                        <p class="detalhes-resumo">
+                            ${card.dataset.summary}
+                        </p>
+
+                        <div class="detalhes-grid">
+
+                            <div class="detalhes-item">
+                                <div class="detalhes-icon">
+                                    <i class="fa-solid fa-paw"></i>
+                                </div>
+                                <div>
+                                    <strong>Serviços</strong>
+                                    <span>${card.dataset.services}</span>
+                                </div>
+                            </div>
+
+                            <div class="detalhes-item">
+                                <div class="detalhes-icon avaliacao-icon">
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div>
+                                    <strong>Avaliação</strong>
+                                    <span>${card.dataset.rating} / 5 · ${card.dataset.reviews} avaliações</span>
+                                </div>
+                            </div>
+
+                            <div class="detalhes-item">
+                                <div class="detalhes-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <strong>Localização</strong>
+                                    <span>${card.dataset.distance.replace(".", ",")} km de você</span>
+                                </div>
+                            </div>
+
+                            <div class="detalhes-item">
+                                <div class="detalhes-icon">
+                                    <i class="fa-solid fa-clock"></i>
+                                </div>
+                                <div>
+                                    <strong>Funcionamento</strong>
+                                    <span>${card.dataset.hours}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="detalhes-footer">
+                            <span>
+                                <i class="fa-solid fa-circle-check"></i>
+                                Parceiro verificado PetLândia
+                            </span>
+
+                            <button type="button" class="detalhes-fechar-texto">
+                                Fechar detalhes
+                            </button>
+                        </div>
+
+                    </div>
+                `;
+
+                detalhe.classList.add("show");
+                detalhe.setAttribute("aria-hidden", "false");
+
+                const fechar =
+                    detalhe.querySelector(".fechar-detalhes");
+
+                const fecharTexto =
+                    detalhe.querySelector(".detalhes-fechar-texto");
+
+                function fecharDetalhe() {
+                    detalhe.classList.remove("show");
+                    detalhe.setAttribute("aria-hidden", "true");
+                    detalhe.innerHTML = "";
+                }
+
+                fechar.addEventListener("click", fecharDetalhe);
+                fecharTexto.addEventListener("click", fecharDetalhe);
+
+                /*
+                 * Não usamos scrollIntoView aqui.
+                 * O detalhe abre abaixo do card sem jogar a página para baixo.
+                 */
+            });
+
+            /* Como chegar usa o MESMO modal do Buscar parceiros. */
+            botaoRota.addEventListener("click", abrirBetaModal);
+        }
+
+
+        /* =========================================
+           PREPARAÇÃO INICIAL
+        ========================================= */
+
+        function criarDetalhe(card) {
+
+            const detalhe = document.createElement("div");
+
+            detalhe.className = "parceiro-detalhes";
+            detalhe.setAttribute("aria-hidden", "true");
+
+            card.insertAdjacentElement("afterend", detalhe);
+
+            return detalhe;
+        }
+
+        function prepararTodosOsCards() {
+
+            /* Garante que não existam painéis duplicados. */
+            limparDetalhesDaLista();
+
+            const cards = Array.from(
+                parceirosLista.querySelectorAll(".parceiro-card")
+            );
+
+            cards.forEach(function (card) {
+
+                const detalhe = criarDetalhe(card);
+
+                prepararDetalhes(card, detalhe);
+            });
+        }
+
+        ordenarParceiros.addEventListener(
+            "change",
+            ordenarListaParceiros
+        );
+
+        prepararTodosOsCards();
+
+        atualizarUsuario();
+
+    </script>
+
+</body>
+
+</html>

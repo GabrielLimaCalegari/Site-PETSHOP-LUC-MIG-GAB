@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    ```
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="sobrenos.css">
+
+    <script src="carrinho.js"></script>
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- =========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>PetLândia</h1>
+
+                    <span>
+                        Seu pet mais feliz
+                        <i class="fa-solid fa-heart red-heart"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Produtos.html">Produtos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="sobrenos.html" class="active">Sobre nós</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- USUÁRIO + CARRINHO -->
+
+            <div class="header-actions">
+
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+     SOBRE NÓS
+========================================== -->
+
+    <main>
+
+        <section class="sobre-nos">
+
+
+            <!-- TÍTULO -->
+
+            <div class="titulo-sobre">
+
+                <div class="linha"></div>
+
+                <div class="patinha">
+                 <i class="fa-solid fa-paw"></i> 
+                </div>
+
+                <div class="linha"></div>
+
+            </div>
+
+
+            <h1>
+                Sobre Nós
+            </h1>
+
+
+
+            <!-- CARD PRINCIPAL -->
+
+            <div class="sobre-card">
+
+
+                <!-- TEXTO -->
+
+                <div class="sobre-texto">
+
+                    <p>
+                        Na <strong>PetLândia</strong>, acreditamos que nossos pets
+                        fazem parte da família e merecem todo o carinho, cuidado
+                        e atenção. Por isso, criamos uma loja totalmente online
+                        para tornar mais fácil encontrar tudo o que seu melhor
+                        amigo precisa em um só lugar.
+                    </p>
+
+
+                    <p>
+                        Trabalhamos com uma seleção de
+                        <strong>rações, brinquedos, produtos de higiene,
+                            acessórios e diversos itens para o bem-estar dos pets</strong>,
+                        sempre buscando oferecer qualidade, praticidade e
+                        ótimos preços.
+                    </p>
+
+
+                    <p>
+                        Por sermos uma loja 100% virtual, conseguimos levar
+                        nossos produtos até você de forma rápida e prática,
+                        sem que você precise sair de casa. Nosso objetivo é
+                        proporcionar uma experiência de compra simples, segura
+                        e confiável, para que você possa dedicar seu tempo ao
+                        que realmente importa:
+                        <strong>cuidar e aproveitar cada momento ao lado do seu pet.</strong>
+                    </p>
+
+
+                    <p>
+                        Mais do que vender produtos, queremos fazer parte da
+                        rotina de quem ama e cuida dos animais. 🐾
+                    </p>
+
+
+                    <p class="slogan">
+
+                        <strong>
+                            PetLândia — cuidado, carinho e tudo o que seu pet
+                            precisa em um só lugar.
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- IMAGEM -->
+
+                <div class="sobre-imagem">
+
+                    <div class="imagem-fundo">
+
+                        <span class="decoracao decoracao-1">
+                            🐾
+                        </span>
+
+                        <span class="decoracao decoracao-2">
+                            ♡
+                        </span>
+
+                        <span class="decoracao decoracao-3">
+                            🐾
+                        </span>
+
+                    </div>
+
+
+                    <img src="img/cachorro.png" alt="Cachorro da PetLândia">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+     MODAL DE DESCONEXÃO
+========================================== -->
+
+    <div id="logout-modal" class="logout-modal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-modal-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+
+            <h2>
+                Desconectar
+            </h2>
+
+
+            <p>
+                Tem certeza que deseja se desconectar
+                da sua conta?
+            </p>
+
+
+            <div class="logout-modal-buttons">
+
+                <button type="button" id="cancel-logout" class="cancel-logout">
+                    Cancelar
+                </button>
+
+
+                <button type="button" id="confirm-logout" class="confirm-logout">
+                    Sim, desconectar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+    <script>
+
+        const userButton =
+            document.getElementById("user-button");
+
+        const userMenu =
+            document.getElementById("user-menu");
+
+        const logoutButton =
+            document.getElementById("logout-button");
+
+        const logoutModal =
+            document.getElementById("logout-modal");
+
+        const cancelLogout =
+            document.getElementById("cancel-logout");
+
+        const confirmLogout =
+            document.getElementById("confirm-logout");
+
+
+        /* =========================================
+           ATUALIZAR USUÁRIO
+        ========================================== */
+
+        function atualizarUsuario() {
+
+            const usuarioLogado =
+                localStorage.getItem("usuarioLogado");
+
+
+            if (usuarioLogado === "true") {
+
+                userButton.innerHTML = `
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Perfil"
+                    class="user-avatar"
+                >
+
+            `;
+
+            } else {
+
+                userButton.innerHTML = `
+
+                <i class="fa-regular fa-user"></i>
+
+            `;
+
+            }
+
+        }
+
+
+        /* =========================================
+           ABRIR / FECHAR MENU
+        ========================================== */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                const usuarioLogado =
+                    localStorage.getItem("usuarioLogado");
+
+
+                if (usuarioLogado !== "true") {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle("show");
+
+            }
+        );
+
+
+        /* =========================================
+           ABRIR MODAL
+        ========================================== */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                userMenu.classList.remove("show");
+
+                logoutModal.classList.add("show");
+
+            }
+        );
+
+
+        /* =========================================
+           CANCELAR
+        ========================================== */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+                logoutModal.classList.remove("show");
+
+            }
+        );
+
+
+        /* =========================================
+           CONFIRMAR DESCONEXÃO
+        ========================================== */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+                logoutModal.classList.remove("show");
+
+                userMenu.classList.remove("show");
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+        /* =========================================
+           CLICAR FORA DO MENU
+        ========================================== */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove("show");
+
+            }
+        );
+
+
+        /* =========================================
+           CLICAR FORA DO MODAL
+        ========================================== */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === logoutModal) {
+
+                    logoutModal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        /* =========================================
+           INICIALIZAÇÃO
+        ========================================== */
+
+        atualizarUsuario();
+
+    </script>
+    ```
+
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    ```
+    <title>Login - PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="login.css">
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <main class="login-page">
+
+        <div class="login-card">
+
+            <!-- Logo -->
+            <div class="login-logo">
+
+                <div class="logo-paw">
+                    <i class="fa-solid fa-paw"></i>
+                </div>
+
+                <div class="logo-text">
+                    <h1>PetLândia</h1>
+                    <span>
+                        Seu pet mais feliz
+                        <i class="fa-solid fa-heart"></i>
+                    </span>
+                </div>
+
+            </div>
+
+
+            <!-- Título -->
+            <div class="login-header">
+                <h2>Bem-vindo de volta!</h2>
+                <p>Entre na sua conta para continuar.</p>
+            </div>
+
+
+            <!-- Formulário -->
+            <form class="login-form" onsubmit="fazerLogin(event)">
+
+                <!-- E-mail -->
+                <div class="input-group">
+
+                    <label for="email">E-mail</label>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-regular fa-envelope"></i>
+
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Senha -->
+                <div class="input-group">
+
+                    <div class="password-label">
+
+                        <label for="senha">Senha</label>
+
+                        <a href="#">Esqueci minha senha</a>
+
+                    </div>
+
+                    <div class="input-wrapper">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+
+                        <button type="button" class="show-password" onclick="mostrarSenha()">
+                            <i class="fa-regular fa-eye"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Lembrar-me -->
+                <div class="remember">
+
+                    <label>
+                        <input type="checkbox">
+                        <span>Lembrar de mim</span>
+                    </label>
+
+                </div>
+
+
+                <!-- Botão -->
+                <button type="submit" class="login-button">
+                    Entrar
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+
+
+            <!-- Cadastro -->
+            <div class="register">
+
+                <p>
+                    Ainda não possui uma conta?
+                    <a href="#">Criar conta</a>
+                </p>
+
+            </div>
+
+
+            <!-- Voltar -->
+            <div class="back-home">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar para o início
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function mostrarSenha() {
+
+            const senha = document.getElementById("senha");
+            const botao = document.querySelector(".show-password i");
+
+            if (senha.type === "password") {
+
+                senha.type = "text";
+
+                botao.classList.remove("fa-eye");
+                botao.classList.add("fa-eye-slash");
+
+            } else {
+
+                senha.type = "password";
+
+                botao.classList.remove("fa-eye-slash");
+                botao.classList.add("fa-eye");
+
+            }
+
+        }
+
+    </script>
+
+    <script>
+        function fazerLogin(event) {
+            event.preventDefault();
+
+            // Pega os dados digitados
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // Verifica se os campos foram preenchidos
+            if (email === "" || senha === "") {
+                alert("Preencha seu e-mail e sua senha.");
+                return;
+            }
+
+            // Login fictício por enquanto
+            window.location.href = "index.html";
+        }
+    </script>
+
+    <script>
+        function fazerLogin(event) {
+
+            event.preventDefault();
+
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            if (email === "" || senha === "") {
+                alert("Preencha seu e-mail e sua senha.");
+                return;
+            }
+
+            // Salva o estado de login
+            localStorage.setItem("usuarioLogado", "true");
+
+            // Vai para a página inicial
+            window.location.href = "index.html";
+        }
+    </script>
+
+
+</body>
+
+</html>

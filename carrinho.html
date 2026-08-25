@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Carrinho - PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS do carrinho -->
+    <link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+            <!-- LOGO -->
+            <a href="index.html" class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+                    <h1>PetLândia</h1>
+
+                    <span>
+                        Seu pet mais feliz
+                        <i class="fa-solid fa-heart red-heart"></i>
+                    </span>
+                </div>
+
+            </a>
+
+
+            <!-- MENU -->
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Produtos.html">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="serviços.html">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sobrenos.html">
+                            Sobre nós
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+            <!-- AÇÕES -->
+            <div class="header-actions">
+
+                <!-- USUÁRIO -->
+                <a href="login.html" class="user-icon">
+                    <i class="fa-regular fa-user"></i>
+                </a>
+
+
+                <!-- CARRINHO -->
+                <a href="carrinho.html" class="cart-icon">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTEÚDO PRINCIPAL
+    ========================== -->
+
+    <main class="cart-page">
+
+        <div class="container">
+
+            <!-- TÍTULO -->
+
+            <div class="page-title">
+
+                <span class="small-title">
+                    PETLÂNDIA
+                </span>
+
+                <h2>
+                    Meu Carrinho
+                </h2>
+
+                <p>
+                    Confira os produtos que você escolheu para o seu pet.
+                </p>
+
+            </div>
+
+
+
+            <!-- =========================
+                 CARRINHO
+            ========================== -->
+
+            <div class="cart-layout">
+
+
+                <!-- PRODUTOS -->
+
+                <section class="cart-products">
+
+                    <div class="cart-header">
+
+                        <h3>
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            Seus produtos
+                        </h3>
+
+                        <span id="cartItemCount">
+                            0 itens
+                        </span>
+
+                    </div>
+
+
+                    <!-- PRODUTOS SERÃO INSERIDOS PELO JAVASCRIPT -->
+
+                    <div id="cartItems" class="cart-items">
+                    </div>
+
+
+                    <!-- CARRINHO VAZIO -->
+
+                    <div id="emptyCart" class="empty-cart">
+
+                        <div class="empty-icon">
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                        </div>
+
+                        <h3>
+                            Seu carrinho está vazio
+                        </h3>
+
+                        <p>
+                            Parece que você ainda não adicionou nenhum
+                            produto para o seu pet.
+                        </p>
+
+                        <a href="Produtos.html" class="btn-primary">
+
+                            <i class="fa-solid fa-paw"></i>
+
+                            Ver produtos
+
+                        </a>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =========================
+                     RESUMO DA COMPRA
+                ========================== -->
+
+                <aside class="cart-summary">
+
+                    <h3>
+                        Resumo da compra
+                    </h3>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Subtotal
+                        </span>
+
+                        <strong id="subtotal">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+
+                    <div class="summary-line">
+
+                        <span>
+                            Frete
+                        </span>
+
+                        <strong id="shipping">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+
+                    <!-- AVISO FRETE -->
+
+                    <div id="shippingMessage" class="shipping-message">
+
+                        <i class="fa-solid fa-truck"></i>
+
+                        <span>
+                            Adicione produtos para calcular o frete.
+                        </span>
+
+                    </div>
+
+
+                    <div class="summary-divider"></div>
+
+
+                    <div class="summary-total">
+
+                        <span>
+                            Total
+                        </span>
+
+                        <strong id="total">
+                            R$ 0,00
+                        </strong>
+
+                    </div>
+
+
+                    <!-- FINALIZAR -->
+
+                    <button type="button" id="checkoutButton" class="checkout-button">
+
+                        <i class="fa-solid fa-lock"></i>
+
+                        Finalizar compra
+
+                    </button>
+
+
+                    <!-- CONTINUAR -->
+
+                    <a href="Produtos.html" class="continue-shopping">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Continuar comprando
+
+                    </a>
+
+                </aside>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================
+         MODAL FINALIZAR COMPRA
+    ========================== -->
+
+    <div id="checkoutModal" class="modal-overlay">
+
+        <div class="modal">
+
+            <button type="button" class="modal-close" id="closeModal">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-icon">
+
+                <i class="fa-solid fa-paw"></i>
+
+            </div>
+
+
+            <h2>
+                Compra pronta!
+            </h2>
+
+            <p>
+                Esta é uma versão demonstrativa da PetLândia.
+                A próxima etapa será criar a página de pagamento.
+            </p>
+
+
+            <button type="button" class="btn-primary modal-button" id="modalOk">
+
+                Entendi
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="carrinho.js"></script>
+
+</body>
+
+</html>

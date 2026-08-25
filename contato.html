@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    ```
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS da página -->
+    <link rel="stylesheet" href="contato.css">
+
+    <script src="carrinho.js"></script>
+    ```
+
+</head>
+
+<body>
+
+    ```
+    <!-- =========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>PetLândia</h1>
+
+                    <span>
+                        Seu pet mais feliz
+                        <i class="fa-solid fa-heart red-heart"></i>
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="Produtos.html">Produtos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="sobrenos.html">Sobre nós</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- USUÁRIO + CARRINHO -->
+
+            <div class="header-actions">
+
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+     PÁGINA DE CONTATO
+========================================== -->
+
+    <main class="contato-page">
+
+
+        <!-- TÍTULO -->
+
+        <div class="contato-header">
+
+            <div class="titulo-linha">
+
+                <span></span>
+
+                <i class="fa-solid fa-paw"></i>
+
+                <span></span>
+
+            </div>
+
+
+            <h2>
+                Entre em Contato
+            </h2>
+
+
+            <p>
+                Estamos aqui para ajudar você e seu pet!
+                Entre em contato com a PetLândia.
+            </p>
+
+        </div>
+
+
+
+        <!-- =========================================
+         CARD PRINCIPAL
+    ========================================== -->
+
+        <section class="contato-container">
+
+
+            <!-- INFORMAÇÕES -->
+
+            <div class="contato-info">
+
+                <h3>
+                    Fale com a gente 🐾
+                </h3>
+
+
+                <p>
+                    Tem alguma dúvida sobre nossos produtos,
+                    pedidos ou formas de pagamento?
+                    Nossa equipe está pronta para ajudar.
+                </p>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            E-mail
+                        </strong>
+
+                        <p>
+                            contato@petlandia.com.br
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            WhatsApp
+                        </strong>
+
+                        <p>
+                            (11) 99999-9999
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="info-item">
+
+                    <div class="info-icon">
+
+                        <i class="fa-solid fa-clock"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Atendimento
+                        </strong>
+
+                        <p>
+                            Segunda a sexta, das 8h às 18h
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contato-paw">
+
+                    <i class="fa-solid fa-paw"></i>
+
+                    <span>
+                        Seu pet merece o melhor!
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- FORMULÁRIO -->
+
+            <div class="contato-form">
+
+                <h3>
+                    Envie uma mensagem
+                </h3>
+
+
+                <form onsubmit="enviarMensagem(event)">
+
+
+                    <div class="form-group">
+
+                        <label for="nome">
+                            Nome
+                        </label>
+
+                        <input type="text" id="nome" placeholder="Digite seu nome" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="assunto">
+                            Assunto
+                        </label>
+
+                        <select id="assunto" required>
+
+                            <option value="">
+                                Selecione um assunto
+                            </option>
+
+                            <option value="produto">
+                                Dúvida sobre produto
+                            </option>
+
+                            <option value="pedido">
+                                Pedido
+                            </option>
+
+                            <option value="pagamento">
+                                Pagamento
+                            </option>
+
+                            <option value="entrega">
+                                Entrega
+                            </option>
+
+                            <option value="outro">
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                        <textarea id="mensagem" rows="6" placeholder="Digite sua mensagem..." required></textarea>
+
+                    </div>
+
+
+                    <button type="submit" class="btn-enviar">
+
+                        Enviar mensagem
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+     MODAL DE DESCONEXÃO
+========================================== -->
+
+    <div id="logout-modal" class="logout-modal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-modal-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+
+            <h2>
+                Desconectar
+            </h2>
+
+
+            <p>
+                Tem certeza que deseja se desconectar
+                da sua conta?
+            </p>
+
+
+            <div class="logout-modal-buttons">
+
+                <button type="button" id="cancel-logout" class="cancel-logout">
+                    Cancelar
+                </button>
+
+
+                <button type="button" id="confirm-logout" class="confirm-logout">
+                    Sim, desconectar
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+    <script>
+
+
+        /* =========================================
+           USUÁRIO
+        ========================================== */
+
+        const userButton =
+            document.getElementById("user-button");
+
+        const userMenu =
+            document.getElementById("user-menu");
+
+        const logoutButton =
+            document.getElementById("logout-button");
+
+        const logoutModal =
+            document.getElementById("logout-modal");
+
+        const cancelLogout =
+            document.getElementById("cancel-logout");
+
+        const confirmLogout =
+            document.getElementById("confirm-logout");
+
+
+        function atualizarUsuario() {
+
+            const usuarioLogado =
+                localStorage.getItem("usuarioLogado");
+
+
+            if (usuarioLogado === "true") {
+
+                userButton.innerHTML = `
+
+                <img
+                    src="https://i.pravatar.cc/100?img=12"
+                    alt="Perfil"
+                    class="user-avatar"
+                >
+
+            `;
+
+            } else {
+
+                userButton.innerHTML = `
+
+                <i class="fa-regular fa-user"></i>
+
+            `;
+
+            }
+
+        }
+
+
+        /* ABRIR MENU */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+
+                const usuarioLogado =
+                    localStorage.getItem("usuarioLogado");
+
+
+                if (usuarioLogado !== "true") {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle("show");
+
+            }
+        );
+
+
+        /* ABRIR MODAL */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+                event.stopPropagation();
+
+                userMenu.classList.remove("show");
+
+                logoutModal.classList.add("show");
+
+            }
+        );
+
+
+        /* CANCELAR */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+                logoutModal.classList.remove("show");
+
+            }
+        );
+
+
+        /* CONFIRMAR DESCONEXÃO */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+                logoutModal.classList.remove("show");
+
+                userMenu.classList.remove("show");
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+        /* CLICAR FORA DO MENU */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove("show");
+
+            }
+        );
+
+
+        /* CLICAR FORA DO MODAL */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+                if (event.target === logoutModal) {
+
+                    logoutModal.classList.remove("show");
+
+                }
+
+            }
+        );
+
+
+        /* =========================================
+           ENVIO DA MENSAGEM
+        ========================================== */
+
+        function enviarMensagem(event) {
+
+            event.preventDefault();
+
+
+            const formulario =
+                event.target;
+
+
+            formulario.reset();
+
+
+            const mensagemSucesso =
+                document.createElement("div");
+
+
+            mensagemSucesso.className =
+                "mensagem-sucesso";
+
+
+            mensagemSucesso.innerHTML = `
+
+            <i class="fa-solid fa-circle-check"></i>
+
+            <div>
+
+                <strong>
+                    Mensagem enviada!
+                </strong>
+
+                <p>
+                    Obrigado por entrar em contato
+                    com a PetLândia. 🐾
+                </p>
+
+            </div>
+
+        `;
+
+
+            formulario.parentElement.insertBefore(
+                mensagemSucesso,
+                formulario
+            );
+
+
+            setTimeout(
+                function () {
+
+                    mensagemSucesso.remove();
+
+                },
+                5000
+            );
+
+        }
+
+
+        /* INICIALIZAÇÃO */
+
+        atualizarUsuario();
+
+    </script>
+    ```
+
+</body>
+
+</html>

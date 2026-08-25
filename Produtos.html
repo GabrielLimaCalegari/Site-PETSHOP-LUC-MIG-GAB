@@ -1,0 +1,2142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PetLândia - Produtos</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- CSS dos produtos -->
+    <link rel="stylesheet" href="produtos.css">
+
+    <!-- Carrinho -->
+    <script src="carrinho.js"></script>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         MENU DE NAVEGAÇÃO
+    ====================================================== -->
+
+    <header class="main-header">
+
+        <div class="container header-content">
+
+
+            <!-- LOGO -->
+
+            <div class="logo">
+
+                <i class="fa-solid fa-paw logo-icon"></i>
+
+                <div class="logo-text">
+
+                    <h1>
+                        PetLândia
+                    </h1>
+
+                    <span>
+
+                        Seu pet mais feliz
+
+                        <i class="fa-solid fa-heart red-heart"></i>
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- MENU -->
+
+            <nav class="nav-menu">
+
+                <ul>
+
+                    <li>
+                        <a href="index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="Produtos.html" class="active">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="serviços.html">
+                            Serviços
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="sobrenos.html">
+                            Sobre nós
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="contato.html">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+
+
+            <!-- =================================================
+                 USUÁRIO + CARRINHO
+            ================================================== -->
+
+            <div class="header-actions">
+
+
+                <!-- USUÁRIO -->
+
+                <div class="user-area">
+
+                    <button type="button" id="user-button" class="user-button" title="Minha conta">
+
+                        <i class="fa-regular fa-user"></i>
+
+                    </button>
+
+
+                    <!-- MENU DO USUÁRIO -->
+
+                    <div id="user-menu" class="user-menu">
+
+                        <button type="button" id="logout-button" class="logout-button">
+
+                            <i class="fa-solid fa-right-from-bracket"></i>
+
+                            Desconectar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CARRINHO -->
+
+                <a href="carrinho.html" class="cart-icon" title="Carrinho">
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    <span class="badge" id="cartBadge">
+                        0
+                    </span>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
+    <section class="products-hero">
+
+        <div class="container">
+
+            <span class="hero-small-title">
+                PETLÂNDIA
+            </span>
+
+            <h2>
+                Nossos Produtos
+            </h2>
+
+            <p>
+                Encontre tudo o que seu melhor amigo precisa
+                para viver com mais saúde, conforto e diversão.
+            </p>
+
+            <i class="fa-solid fa-paw hero-paw"></i>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL
+    ====================================================== -->
+
+    <main class="products-area">
+
+        <div class="products-container">
+
+
+            <!-- =================================================
+                 ESCOLHA DO ANIMAL
+            ================================================== -->
+
+            <section class="animal-selection" id="animalSelection">
+
+                <div class="selection-title">
+
+                    <h2>
+                        O que você está procurando?
+                    </h2>
+
+                    <p>
+                        Primeiro, selecione para qual pet você está procurando.
+                    </p>
+
+                </div>
+
+
+                <div class="animal-buttons">
+
+
+                    <!-- GATOS -->
+
+                    <button class="animal-button" data-animal="gatos">
+
+                        <div class="animal-icon">
+
+                            <i class="fa-solid fa-cat"></i>
+
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Gatos
+                            </strong>
+
+                            <span>
+                                Produtos para gatos
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- CACHORROS -->
+
+                    <button class="animal-button" data-animal="cachorros">
+
+                        <div class="animal-icon">
+
+                            <i class="fa-solid fa-dog"></i>
+
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Cachorros
+                            </strong>
+
+                            <span>
+                                Produtos para cachorros
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+
+                    <!-- TODOS -->
+
+                    <button class="animal-button" data-animal="todos">
+
+                        <div class="animal-icon">
+
+                            <i class="fa-solid fa-paw"></i>
+
+                        </div>
+
+                        <div class="animal-text">
+
+                            <strong>
+                                Todos
+                            </strong>
+
+                            <span>
+                                Produtos para todos os pets
+                            </span>
+
+                        </div>
+
+                    </button>
+
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 PRODUTOS
+            ================================================== -->
+
+            <section class="products-content" id="productsContent" hidden>
+
+
+                <!-- CABEÇALHO -->
+
+                <div class="selected-category-header">
+
+                    <div>
+
+                        <span>
+                            CATEGORIA SELECIONADA
+                        </span>
+
+                        <h2 id="selectedAnimalTitle">
+                            Produtos
+                        </h2>
+
+                    </div>
+
+
+                    <button class="change-animal" id="changeAnimal">
+
+                        <i class="fa-solid fa-arrows-rotate"></i>
+
+                        Trocar categoria
+
+                    </button>
+
+                </div>
+
+
+
+                <!-- SUBCATEGORIAS -->
+
+                <div class="subcategory-area">
+
+
+                    <button class="subcategory-button" data-category="racoes">
+
+                        <i class="fa-solid fa-bowl-food"></i>
+
+                        Rações
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="brinquedos">
+
+                        <i class="fa-solid fa-bone"></i>
+
+                        Brinquedos
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="acessorios">
+
+                        <i class="fa-solid fa-paw"></i>
+
+                        Acessórios
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="higiene">
+
+                        <i class="fa-solid fa-pump-soap"></i>
+
+                        Higiene
+
+                    </button>
+
+
+                    <button class="subcategory-button" data-category="saude">
+
+                        <i class="fa-solid fa-kit-medical"></i>
+
+                        Saúde
+
+                    </button>
+
+
+                </div>
+
+
+
+                <!-- TÍTULO -->
+
+                <div class="category-title">
+
+                    <span></span>
+
+                    <div>
+
+                        <h3 id="subcategoryTitle">
+                            Selecione uma categoria
+                        </h3>
+
+                        <i class="fa-solid fa-paw"></i>
+
+                    </div>
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- PRODUTOS -->
+
+                <div class="products-grid" id="productsGrid">
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         VOLTAR AO TOPO
+    ====================================================== -->
+
+    <button id="backToTop" class="back-to-top" title="Voltar ao topo">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+
+    <!-- =====================================================
+         MODAL DE DESCONEXÃO
+    ====================================================== -->
+
+    <div id="logout-modal" class="logout-modal">
+
+        <div class="logout-modal-content">
+
+
+            <div class="logout-modal-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+
+            <h2>
+                Desconectar
+            </h2>
+
+
+            <p>
+
+                Tem certeza que deseja se desconectar
+                da sua conta?
+
+            </p>
+
+
+            <div class="logout-modal-buttons">
+
+
+                <button type="button" id="cancel-logout" class="cancel-logout">
+
+                    Cancelar
+
+                </button>
+
+
+                <button type="button" id="confirm-logout" class="confirm-logout">
+
+                    Sim, desconectar
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+
+        /* =================================================
+           PRODUTOS
+        ================================================= */
+
+        const products = {
+
+            gatos: {
+
+                racoes: [
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Gatos Adultos 900g (sabor carne)",
+                        price: "R$ 24,90",
+                        image: "img/287226-1.webp"
+                    },
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Gatos Adultos 10,1kg (sabor carne)",
+                        price: "R$ 49,90",
+                        image: "img/raçao 4 C.jpg"
+                    },
+
+                    {
+                        name: "Ração Optimum",
+                        description: "Gatos filhotes 1-12 meses (sabor carne e leite)",
+                        price: "R$ 64,90",
+                        image: "img/gato4.jpg"
+                    },
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Gatos Adultos 10,1kg (sabor peixe)",
+                        price: "R$ 49,90",
+                        image: "img/racao gato 2.jpg"
+                    },
+
+                    {
+                        name: "Ração Friskies",
+                        description: "Petiscos para gato com frango de verdade",
+                        price: "R$ 29,90",
+                        image: "img/20003280000060_1764268358870.jpg"
+                    },
+
+                    {
+                        name: "Petisco Cat Stix",
+                        description: "Snack líquido finotrato sabor frango para gatos - 15g",
+                        price: "R$ 19,90",
+                        image: "img/petisco-cat-stix-snack-l-quido-finotrato-sabor-frango-para-gatos---15g-gb8zr9yvsr.webp"
+                    },
+
+                    {
+                        name: "Petisco Optimum",
+                        description: "Petisco Optimum Gatos Adultos Anti Pele e Pelo - 60g",
+                        price: "R$ 39,90",
+                        image: "img/Petisco-Optimum-Gatos-Adultos-Anti-Pele-e-Pelo.webp"
+                    },
+
+                    {
+                        name: "Petisco Cat Stix",
+                        description: "Petisco Magnus (sabor salmão) para gatos - 65g",
+                        price: "R$ 49,90",
+                        image: "img/images (2).jpg"
+                    },
+
+                    {
+                        name: "Petisco Premier",
+                        description: "Petisco Premier Cookie para Gatos Adultos - 40g",
+                        price: "R$ 29,90",
+                        image: "img/petiscos-premier-cookie-para-gatos-adultos-40g-9540.jpg"
+                    },
+
+                    {
+                        name: "Ração Whiskas",
+                        description: "Ração Whiskas para Gatos Adultos (sabor frango)- 50g",
+                        price: "R$ 239,90",
+                        image: "img/racao gato 3.jpg"
+                    }
+
+                ],
+
+
+                brinquedos: [
+
+                    {
+                        name: "Varinha com penas",
+                        description: "Varinha com penas para gatos",
+                        price: "R$ 49,90",
+                        image: "img/shopping (5).webp"
+                    },
+
+                    {
+                        name: "Ratinho de Brinquedo",
+                        description: "Ratinho de brinquedo para gatos",
+                        price: "R$ 34,90",
+                        image: "img/sg-11134201-82586-mrqs8ziaz3syc3.jpg"
+                    },
+
+                    {
+                        name: "Bolinha Colorida de feno",
+                        description: "bolinha colorida de feno para gatos",
+                        price: "R$ 24,90",
+                        image: "img/shopping (7).webp"
+                    },
+
+                    {
+                        name: "Varinha com penas coloridas",
+                        description: "Varinha com penas coloridas para gatos",
+                        price: "R$ 44,90",
+                        image: "img/shopping (6).webp"
+                    },
+
+                    {
+                        name: "Toys Avocado Catnip",
+                        description: "Toys Avocado Catnip para gatos",
+                        price: "R$ 44,90",
+                        image: "img/shopping (4).webp"
+                    }
+
+                ],
+
+
+                acessorios: [
+
+                    {
+                        name: "Ropinha listrada para Gatos",
+                        description: "Ropinha listrada para Gatos",
+                        price: "R$ 69,90",
+                        image: "img/shopping (11).webp"
+                    },
+
+                    {
+                        name: "Acessório de pescoço para Gatos",
+                        description: "Acessório de pescoço para Gatos",
+                        price: "R$ 59,90",
+                        image: "img/617va+1GvFL.jpg"
+                    },
+
+                    {
+                        name: "Arranhador de Gatos",
+                        description: "Arranhador para gatos",
+                        price: "R$ 59,90",
+                        image: "img/shopping (10).webp"
+                    },
+
+                    {
+                        name: "Arranhador de Gatos com brinquedo",
+                        description: "Arranhador para gatos com brinquedo",
+                        price: "R$ 99,90",
+                        image: "img/shopping (3).webp"
+                    },
+
+                    {
+                        name: "Coleira para Gatos",
+                        description: "Coleira para gatos",
+                        price: "R$ 29,90",
+                        image: "img/ewv41t11raxadd8vuyjtyz0sv0jv.webp"
+                    },
+
+                    {
+                        name: "Ropinha de abelha com capuz para Gatos",
+                        description: "Ropinha de abelha com capuz para Gatos",
+                        price: "R$ 89,90",
+                        image: "img/D_NQ_NP_859760-MLM101791578189_122025-O-moletom-com-capuz-para-gatos--design-de-abelhas-com-antenas.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno com coração para gatos e cachorros",
+                        description: "Ropinha de inverno com coração para gatos e cachorros",
+                        price: "R$ 69,90",
+                        image: "img/D_NQ_NP_986244-CBT89402841341_082025-O-roupas-para-cachorro-e-gato-de-inverno-pulover.webp"
+                    },
+
+                    {
+                        name: "Avental de flanela para gatos",
+                        description: "Avental de flanela para gatos",
+                        price: "R$ 69,90",
+                        image: "img/D_NQ_NP_987557-MLB111290478006_052026-O-avental-de-flanela-para-gatos-roupas-supermacias-para-anima.webp"
+                    },
+
+                    {
+                        name: "Colete de pelucia para gatos",
+                        description: "Colete de pelucia para gatos",
+                        price: "R$ 59,90",
+                        image: "img/D_NQ_NP_954559-CBT109203171248_042026-O-colete-de-pelucia-para-gatos-roupas-de-la-para-animais-de-e.webp"
+                    },
+
+                    {
+                        name: "Ropinha com suspensorio para gatos",
+                        description: "Ropinha com suspensorio para gatos",
+                        price: "R$ 79,90",
+                        image: "img/shopping (9).webp"
+                    }
+
+                ],
+
+
+                higiene: [
+
+                    {
+                        name: "Shampoo pet clean",
+                        description: "Limpeza suave para seu pet",
+                        price: "R$ 44,90",
+                        image: "img/1090094-1500-1500.webp"
+                    },
+
+                    {
+                        name: "Areia Sanitária super seca para Gatos",
+                        description: "Alta absorção e controle de odores",
+                        price: "R$ 39,90",
+                        image: "img/2752939_Areia_Sanitária_Mineral_Meau_Super_Seca_para_Gatos_(1).png"
+                    }
+
+                ],
+
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Gatos e cachorros",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "img/D_NQ_NP_626149-MLB108650189264_032026-O.webp"
+                    }
+
+                ]
+
+            },
+
+
+            cachorros: {
+
+                racoes: [
+
+                    {
+                        name: "Ração Dreamies",
+                        description: "Cães Adultos (sabor carne) - 40g",
+                        price: "R$ 29,90",
+                        image: "img/yhtsr5g6kgwd3cmfduk5z9zjvpy6.jpg"
+                    },
+
+                    {
+                        name: "Sache de Ração Úmida Pedigree",
+                        description: "Caes Adultos Raças Pequenas Sabor Cordeiro ao Molho - 100g",
+                        price: "R$ 39,90",
+                        image: "img/sache_de_racao_umida_pedigree_caes_adultos_racas_pequenas_sabor_cordeiro_ao_molho_100g_501_1_20200603153610.webp"
+                    },
+
+                    {
+                        name: "Ração Pedigree",
+                        description: "Ração raças pequenas (sabor carne e vegetais) - 1kg",
+                        price: "R$ 29,90",
+                        image: "img/raçao.jpg"
+                    },
+
+                    {
+                        name: "Ração Gran Plus",
+                        description: "Para cachorro filhote (sabor carne e arroz) - 15kg",
+                        price: "R$ 34,90",
+                        image: "img/racao_para_cachorro_filhote_gran_plus_carne_e_arroz_15kg_551_1_20200319192342.webp"
+                    },
+
+                    {
+                        name: "Petisco Pedigree Tasty Bites",
+                        description: "Cães Adultos (sabor carne suculenta) - 40g",
+                        price: "R$ 39,90",
+                        image: "img/petisco-pedigree-tasty-bites-caes-adultos-carne-suculenta-40g-1.png"
+                    },
+
+                    {
+                        name: "Petisco Dentastix",
+                        description: "Cães Racas Grandes (sabor menta) - 15g",
+                        price: "R$ 49,90",
+                        image: "img/petisco_dentastix_pedigree_caes_racas_grandes_651_1_e1dabccc7ab7e5213a6c0c7e37dfb486.webp"
+                    },
+
+                    {
+                        name: "Petisco Dentastix",
+                        description: "Cães Racas Grandes (sabor menta) - 15g",
+                        price: "R$ 49,90",
+                        image: "img/petisco_dentastix_pedigree_caes_racas_grandes_651_1_e1dabccc7ab7e5213a6c0c7e37dfb486.webp"
+                    },
+
+                    {
+                        name: "Petisco Filezitos",
+                        description: "Cães Adultos (sabor carne) - 60g",
+                        price: "R$ 29,90",
+                        image: "img/petisco_c_es_pedigree_filezitos_carne_60g_5738beae-535f-48e7-8905-ca9de50094e0.png"
+                    },
+
+                    {
+                        name: "Petisco Pedigree",
+                        description: "Petisco Marrobone (sabor carne)",
+                        price: "R$ 19,90",
+                        image: "img/petisco 2.png"
+                    },
+
+                    {
+                        name: "Petisco Pedigree Dentastix Tripla ação",
+                        description: "Petisco Dentastix Tripla ação 5-12kg",
+                        price: "R$ 29,90",
+                        image: "img/petisco 1.png"
+                    },
+
+                    {
+                        name: "Ração Pedigree",
+                        description: "Ração para cães adultos (sabor carne e frango e cereais) - 15kg",
+                        price: "R$ 49,90",
+                        image: "img/images.jpg"
+                    },
+
+                    {
+                        name: "Ração Pedigree",
+                        description: "Ração para filhotes (sabor carne e frango e cereais) - 10,1kg",
+                        price: "R$ 39,90",
+                        image: "img/filhote.jpg"
+                    },
+
+                    {
+                        name: "Ração especialdog",
+                        description: "Ração Especialdog para cães adultos (sabor carne)",
+                        price: "R$ 59,90",
+                        image: "img/281039.webp"
+                    }
+
+                ],
+
+
+                brinquedos: [
+
+                    {
+                        name: "Brinquedo Mordedor",
+                        description: "Corda de plastico resistente",
+                        price: "R$ 29,90",
+                        image: "img/shopping (1).webp"
+                    },
+
+                    {
+                        name: "Osso BambooBone Chicken",
+                        description: "Osso de borracha resistente",
+                        price: "R$ 24,90",
+                        image: "img/osso_bamboobone_chicken.webp"
+                    },
+
+                    {
+                        name: "Corda para Brincar",
+                        description: "Corda resistente para diversão",
+                        price: "R$ 19,90",
+                        image: "img/shopping (2).webp"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor Nylon Cenoura e Graveto Buddy Toys",
+                        description: "Ideal para cães que gostam de roer",
+                        price: "R$ 39,90",
+                        image: "img/Brinquedo-Mordedor-Nylon-Cenoura-e-Graveto-Buddy-Toys.png"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor Bambo Toys",
+                        description: "Ideal para cães que gostam de roer",
+                        price: "R$ 29,90",
+                        image: "img/Bambo toys.webp"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor formato crocodilo",
+                        description: "Brinqudedo resistente para cães que gostam de roer",
+                        price: "R$ 19,90",
+                        image: "img/brinquedo modedor.webp"
+                    }
+
+                ],
+
+
+                acessorios: [
+
+                    {
+                        name: "Suspensorio para Cachorros",
+                        description: "Ajustável e confortável",
+                        price: "R$ 59,90",
+                        image: "img/shopping (8).webp"
+                    },
+
+                    {
+                        name: "Coleira com espinhos para Cachorros",
+                        description: "Resistente e segura",
+                        price: "R$ 64,90",
+                        image: "img/D_NQ_NP_635067-CBT43142351041_082020-O.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno para Cachorros",
+                        description: "Resistente e confortavel",
+                        price: "R$ 64,90",
+                        image: "img/D_NQ_NP_625611-MLB109903796026_042026-O-roupinha-de-la-n14-42cm-para-caes-tecido-de-alta-qualidade.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno para Cachorros e Gatos",
+                        description: "Quente e facil de limpar",
+                        price: "R$ 54,90",
+                        image: "img/D_NQ_NP_986244-CBT89402841341_082025-O-roupas-para-cachorro-e-gato-de-inverno-pulover.webp"
+                    },
+
+                    {
+                        name: "Coleira para Cachorros",
+                        description: "Ajustavel",
+                        price: "R$ 14,90",
+                        image: "img/285244-1.webp"
+                    }
+
+                ],
+
+
+                higiene: [
+
+                    {
+                        name: "Shampoo pet clean",
+                        description: "Limpeza suave para seu pet",
+                        price: "R$ 44,90",
+                        image: "img/1090094-1500-1500.webp"
+                    }
+
+                ],
+
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Gatos e cachorros",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "img/D_NQ_NP_626149-MLB108650189264_032026-O.webp"
+                    }
+
+                ]
+
+            },
+
+
+            todos: {
+
+                racoes: [
+
+                    ...[
+                        {
+                            name: "Ração Dreamies",
+                            description: "Cães Adultos (sabor carne) - 40g",
+                            price: "R$ 29,90",
+                            image: "img/yhtsr5g6kgwd3cmfduk5z9zjvpy6.jpg"
+                        },
+                        {
+                            name: "Sache de Ração Úmida Pedigree",
+                            description: "Caes Adultos Raças Pequenas Sabor Cordeiro ao Molho - 100g",
+                            price: "R$ 39,90",
+                            image: "img/sache_de_racao_umida_pedigree_caes_adultos_racas_pequenas_sabor_cordeiro_ao_molho_100g_501_1_20200603153610.webp"
+                        },
+                        {
+                            name: "Ração Pedigree",
+                            description: "Ração raças pequenas (sabor carne e vegetais) - 1kg",
+                            price: "R$ 29,90",
+                            image: "img/raçao.jpg"
+                        },
+                        {
+                            name: "Ração Gran Plus",
+                            description: "Para cachorro filhote (sabor carne e arroz) - 15kg",
+                            price: "R$ 34,90",
+                            image: "img/racao_para_cachorro_filhote_gran_plus_carne_e_arroz_15kg_551_1_20200319192342.webp"
+                        },
+                        {
+                            name: "Petisco Pedigree Tasty Bites",
+                            description: "Cães Adultos (sabor carne suculenta) - 40g",
+                            price: "R$ 39,90",
+                            image: "img/petisco-pedigree-tasty-bites-caes-adultos-carne-suculenta-40g-1.png"
+                        },
+                        {
+                            name: "Petisco Dentastix",
+                            description: "Cães Racas Grandes (sabor menta) - 15g",
+                            price: "R$ 49,90",
+                            image: "img/petisco_dentastix_pedigree_caes_racas_grandes_651_1_e1dabccc7ab7e5213a6c0c7e37dfb486.webp"
+                        },
+                        {
+                            name: "Petisco Filezitos",
+                            description: "Cães Adultos (sabor carne) - 60g",
+                            price: "R$ 29,90",
+                            image: "img/petisco_c_es_pedigree_filezitos_carne_60g_5738beae-535f-48e7-8905-ca9de50094e0.png"
+                        },
+                        {
+                            name: "Petisco Pedigree",
+                            description: "Petisco Marrobone (sabor carne)",
+                            price: "R$ 19,90",
+                            image: "img/petisco 2.png"
+                        },
+                        {
+                            name: "Petisco Pedigree Dentastix Tripla ação",
+                            description: "Petisco Dentastix Tripla ação 5-12kg",
+                            price: "R$ 29,90",
+                            image: "img/petisco 1.png"
+                        },
+                        {
+                            name: "Ração Pedigree",
+                            description: "Ração para cães adultos (sabor carne e frango e cereais) - 15kg",
+                            price: "R$ 49,90",
+                            image: "img/images.jpg"
+                        },
+                        {
+                            name: "Ração Pedigree",
+                            description: "Ração para filhotes (sabor carne e frango e cereais) - 10,1kg",
+                            price: "R$ 39,90",
+                            image: "img/filhote.jpg"
+                        },
+                        {
+                            name: "Ração especialdog",
+                            description: "Ração Especialdog para cães adultos (sabor carne)",
+                            price: "R$ 59,90",
+                            image: "img/281039.webp"
+                        },
+                        {
+                            name: "Ração Whiskas",
+                            description: "Gatos Adultos 900g (sabor carne)",
+                            price: "R$ 24,90",
+                            image: "img/287226-1.webp"
+                        },
+                        {
+                            name: "Ração Whiskas",
+                            description: "Gatos Adultos 10,1kg (sabor carne)",
+                            price: "R$ 49,90",
+                            image: "img/raçao 4 C.jpg"
+                        },
+                        {
+                            name: "Ração Optimum",
+                            description: "Gatos filhotes 1-12 meses (sabor carne e leite)",
+                            price: "R$ 64,90",
+                            image: "img/gato4.jpg"
+                        },
+                        {
+                            name: "Ração Whiskas",
+                            description: "Gatos Adultos 10,1kg (sabor peixe)",
+                            price: "R$ 49,90",
+                            image: "img/racao gato 2.jpg"
+                        },
+                        {
+                            name: "Ração Friskies",
+                            description: "Petiscos para gato com frango de verdade",
+                            price: "R$ 29,90",
+                            image: "img/20003280000060_1764268358870.jpg"
+                        },
+                        {
+                            name: "Petisco Cat Stix",
+                            description: "Snack líquido finotrato sabor frango para gatos - 15g",
+                            price: "R$ 19,90",
+                            image: "img/petisco-cat-stix-snack-l-quido-finotrato-sabor-frango-para-gatos---15g-gb8zr9yvsr.webp"
+                        },
+                        {
+                            name: "Petisco Optimum",
+                            description: "Petisco Optimum Gatos Adultos Anti Pele e Pelo - 60g",
+                            price: "R$ 39,90",
+                            image: "img/Petisco-Optimum-Gatos-Adultos-Anti-Pele-e-Pelo.webp"
+                        },
+                        {
+                            name: "Petisco Cat Stix",
+                            description: "Petisco Magnus (sabor salmão) para gatos - 65g",
+                            price: "R$ 49,90",
+                            image: "img/images (2).jpg"
+                        },
+                        {
+                            name: "Petisco Premier",
+                            description: "Petisco Premier Cookie para Gatos Adultos - 40g",
+                            price: "R$ 29,90",
+                            image: "img/petiscos-premier-cookie-para-gatos-adultos-40g-9540.jpg"
+                        },
+                        {
+                            name: "Ração Whiskas",
+                            description: "Ração Whiskas para Gatos Adultos (sabor frango)- 50g",
+                            price: "R$ 239,90",
+                            image: "img/racao gato 3.jpg"
+                        }
+                    ]
+
+                ],
+
+
+                brinquedos: [
+
+                    {
+                        name: "Brinquedo Mordedor",
+                        description: "Corda de plastico resistente",
+                        price: "R$ 29,90",
+                        image: "img/shopping (1).webp"
+                    },
+
+                    {
+                        name: "Osso BambooBone Chicken",
+                        description: "Osso de borracha resistente",
+                        price: "R$ 24,90",
+                        image: "img/osso_bamboobone_chicken.webp"
+                    },
+
+                    {
+                        name: "Corda para Brincar",
+                        description: "Corda resistente para diversão",
+                        price: "R$ 19,90",
+                        image: "img/shopping (2).webp"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor Nylon Cenoura e Graveto Buddy Toys",
+                        description: "Ideal para cães que gostam de roer",
+                        price: "R$ 39,90",
+                        image: "img/Brinquedo-Mordedor-Nylon-Cenoura-e-Graveto-Buddy-Toys.png"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor Bambo Toys",
+                        description: "Ideal para cães que gostam de roer",
+                        price: "R$ 29,90",
+                        image: "img/Bambo toys.webp"
+                    },
+
+                    {
+                        name: "Brinquedo Mordedor formato crocodilo",
+                        description: "Brinqudedo resistente para cães que gostam de roer",
+                        price: "R$ 19,90",
+                        image: "img/brinquedo modedor.webp"
+                    },
+
+                    {
+                        name: "Varinha com penas",
+                        description: "Varinha com penas para gatos",
+                        price: "R$ 49,90",
+                        image: "img/shopping (5).webp"
+                    },
+
+                    {
+                        name: "Ratinho de Brinquedo",
+                        description: "Ratinho de brinquedo para gatos",
+                        price: "R$ 34,90",
+                        image: "img/sg-11134201-82586-mrqs8ziaz3syc3.jpg"
+                    },
+
+                    {
+                        name: "Bolinha Colorida de feno",
+                        description: "bolinha colorida de feno para gatos",
+                        price: "R$ 24,90",
+                        image: "img/shopping (7).webp"
+                    },
+
+                    {
+                        name: "Varinha com penas coloridas",
+                        description: "Varinha com penas coloridas para gatos",
+                        price: "R$ 44,90",
+                        image: "img/shopping (6).webp"
+                    },
+
+                    {
+                        name: "Toys Avocado Catnip",
+                        description: "Toys Avocado Catnip para gatos",
+                        price: "R$ 44,90",
+                        image: "img/shopping (4).webp"
+                    }
+
+                ],
+
+
+                acessorios: [
+
+                    {
+                        name: "Suspensorio para Cachorros",
+                        description: "Ajustável e confortável",
+                        price: "R$ 59,90",
+                        image: "img/shopping (8).webp"
+                    },
+
+                    {
+                        name: "Coleira com espinhos para Cachorros",
+                        description: "Resistente e segura",
+                        price: "R$ 64,90",
+                        image: "img/D_NQ_NP_635067-CBT43142351041_082020-O.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno para Cachorros",
+                        description: "Resistente e confortavel",
+                        price: "R$ 64,90",
+                        image: "img/D_NQ_NP_625611-MLB109903796026_042026-O-roupinha-de-la-n14-42cm-para-caes-tecido-de-alta-qualidade.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno para Cachorros e Gatos",
+                        description: "Quente e facil de limpar",
+                        price: "R$ 54,90",
+                        image: "img/D_NQ_NP_986244-CBT89402841341_082025-O-roupas-para-cachorro-e-gato-de-inverno-pulover.webp"
+                    },
+
+                    {
+                        name: "Coleira para Cachorros",
+                        description: "Ajustavel",
+                        price: "R$ 14,90",
+                        image: "img/285244-1.webp"
+                    },
+
+                    {
+                        name: "Ropinha listrada para Gatos",
+                        description: "Ropinha listrada para Gatos",
+                        price: "R$ 69,90",
+                        image: "img/shopping (11).webp"
+                    },
+
+                    {
+                        name: "Acessório de pescoço para Gatos",
+                        description: "Acessório de pescoço para Gatos",
+                        price: "R$ 59,90",
+                        image: "img/617va+1GvFL.jpg"
+                    },
+
+                    {
+                        name: "Arranhador de Gatos",
+                        description: "Arranhador para gatos",
+                        price: "R$ 59,90",
+                        image: "img/shopping (10).webp"
+                    },
+
+                    {
+                        name: "Arranhador de Gatos com brinquedo",
+                        description: "Arranhador para gatos com brinquedo",
+                        price: "R$ 99,90",
+                        image: "img/shopping (3).webp"
+                    },
+
+                    {
+                        name: "Coleira para Gatos",
+                        description: "Coleira para gatos",
+                        price: "R$ 29,90",
+                        image: "img/ewv41t11raxadd8vuyjtyz0sv0jv.webp"
+                    },
+
+                    {
+                        name: "Ropinha de abelha com capuz para Gatos",
+                        description: "Ropinha de abelha com capuz para Gatos",
+                        price: "R$ 89,90",
+                        image: "img/D_NQ_NP_859760-MLM101791578189_122025-O-moletom-com-capuz-para-gatos--design-de-abelhas-com-antenas.webp"
+                    },
+
+                    {
+                        name: "Ropinha de inverno com coração para gatos e cachorros",
+                        description: "Ropinha de inverno com coração para gatos e cachorros",
+                        price: "R$ 69,90",
+                        image: "img/D_NQ_NP_986244-CBT89402841341_082025-O-roupas-para-cachorro-e-gato-de-inverno-pulover.webp"
+                    },
+
+                    {
+                        name: "Avental de flanela para gatos",
+                        description: "Avental de flanela para gatos",
+                        price: "R$ 69,90",
+                        image: "img/D_NQ_NP_987557-MLB111290478006_052026-O-avental-de-flanela-para-gatos-roupas-supermacias-para-anima.webp"
+                    },
+
+                    {
+                        name: "Colete de pelucia para gatos",
+                        description: "Colete de pelucia para gatos",
+                        price: "R$ 59,90",
+                        image: "img/D_NQ_NP_954559-CBT109203171248_042026-O-colete-de-pelucia-para-gatos-roupas-de-la-para-animais-de-e.webp"
+                    },
+
+                    {
+                        name: "Ropinha com suspensorio para gatos",
+                        description: "Ropinha com suspensorio para gatos",
+                        price: "R$ 79,90",
+                        image: "img/shopping (9).webp"
+                    }
+
+                ],
+
+
+                higiene: [
+
+                    {
+                        name: "Shampoo pet clean",
+                        description: "Limpeza suave para seu pet",
+                        price: "R$ 44,90",
+                        image: "img/1090094-1500-1500.webp"
+                    },
+
+                    {
+                        name: "Areia Sanitária super seca para Gatos",
+                        description: "Alta absorção e controle de odores",
+                        price: "R$ 39,90",
+                        image: "img/2752939_Areia_Sanitária_Mineral_Meau_Super_Seca_para_Gatos_(1).png"
+                    }
+
+                ],
+
+
+                saude: [
+
+                    {
+                        name: "Suplemento para Gatos e cachorros",
+                        description: "Auxilia no bem-estar do seu pet",
+                        price: "R$ 49,90",
+                        image: "img/D_NQ_NP_626149-MLB108650189264_032026-O.webp"
+                    }
+
+                ]
+
+            }
+
+        };
+
+
+
+        /* =================================================
+           ELEMENTOS
+        ================================================= */
+
+        const animalButtons =
+            document.querySelectorAll(".animal-button");
+
+        const subcategoryButtons =
+            document.querySelectorAll(".subcategory-button");
+
+        const productsContent =
+            document.getElementById("productsContent");
+
+        const selectedAnimalTitle =
+            document.getElementById("selectedAnimalTitle");
+
+        const subcategoryTitle =
+            document.getElementById("subcategoryTitle");
+
+        const productsGrid =
+            document.getElementById("productsGrid");
+
+        const changeAnimal =
+            document.getElementById("changeAnimal");
+
+        const animalSelection =
+            document.getElementById("animalSelection");
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+
+
+        /* =================================================
+           VARIÁVEIS
+        ================================================= */
+
+        let selectedAnimal = null;
+
+        let selectedCategory = null;
+
+
+
+        /* =================================================
+           NOMES
+        ================================================= */
+
+        const animalNames = {
+
+            gatos:
+                "Produtos para Gatos",
+
+            cachorros:
+                "Produtos para Cachorros",
+
+            todos:
+                "Produtos para Todos os Pets"
+
+        };
+
+
+        const categoryNames = {
+
+            racoes:
+                "Rações",
+
+            brinquedos:
+                "Brinquedos",
+
+            acessorios:
+                "Acessórios",
+
+            higiene:
+                "Higiene",
+
+            saude:
+                "Saúde"
+
+        };
+
+
+
+        /* =================================================
+           SELECIONAR ANIMAL
+        ================================================= */
+
+        animalButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+                const animal =
+                    button.dataset.animal;
+
+
+                animalButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                button.classList.add("selected");
+
+
+                selectedAnimal =
+                    animal;
+
+
+                selectedAnimalTitle.textContent =
+                    animalNames[animal];
+
+
+                productsContent.hidden =
+                    false;
+
+
+                selectedCategory =
+                    null;
+
+
+                subcategoryButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                subcategoryTitle.textContent =
+                    "Selecione uma categoria";
+
+
+                productsGrid.innerHTML = `
+
+                    <div class="empty-products">
+
+                        <i class="fa-solid fa-paw"></i>
+
+                        <h3>
+                            Escolha uma categoria
+                        </h3>
+
+                        <p>
+                            Selecione Rações, Brinquedos,
+                            Acessórios, Higiene ou Saúde.
+                        </p>
+
+                    </div>
+
+                `;
+
+
+                setTimeout(() => {
+
+                    productsContent.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+
+
+        /* =================================================
+           SELECIONAR SUBCATEGORIA
+        ================================================= */
+
+        subcategoryButtons.forEach(button => {
+
+            button.addEventListener("click", () => {
+
+
+                if (!selectedAnimal) {
+
+                    animalSelection.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                    return;
+
+                }
+
+
+                const category =
+                    button.dataset.category;
+
+
+                selectedCategory =
+                    category;
+
+
+                subcategoryButtons.forEach(btn => {
+
+                    btn.classList.remove("selected");
+
+                });
+
+
+                button.classList.add("selected");
+
+
+                subcategoryTitle.textContent =
+                    categoryNames[category];
+
+
+                renderProducts();
+
+
+                setTimeout(() => {
+
+                    productsGrid.scrollIntoView({
+
+                        behavior: "smooth",
+
+                        block: "start"
+
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+
+
+        /* =================================================
+           RENDERIZAR PRODUTOS
+        ================================================= */
+
+        function renderProducts() {
+
+            productsGrid.innerHTML = "";
+
+
+            if (!selectedAnimal || !selectedCategory) {
+
+                return;
+
+            }
+
+
+            const productList =
+                products[selectedAnimal][selectedCategory];
+
+
+            if (!productList || productList.length === 0) {
+
+                productsGrid.innerHTML = `
+
+                    <div class="empty-products">
+
+                        <i class="fa-solid fa-box-open"></i>
+
+                        <h3>
+                            Nenhum produto encontrado
+                        </h3>
+
+                        <p>
+                            Em breve teremos novidades nesta categoria.
+                        </p>
+
+                    </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            productList.forEach((product, index) => {
+
+
+                const card =
+                    document.createElement("article");
+
+
+                card.className =
+                    "product-card";
+
+
+                const productId = (
+
+                    product.name +
+                    "-" +
+                    product.description +
+                    "-" +
+                    product.price +
+                    "-" +
+                    index
+
+                )
+                    .toLowerCase()
+                    .normalize("NFD")
+                    .replace(/[\u0300-\u036f]/g, "")
+                    .replace(/[^a-z0-9]+/g, "-")
+                    .replace(/^-+|-+$/g, "");
+
+
+                const numericPrice =
+                    Number(
+
+                        product.price
+
+                            .replace("R$", "")
+
+                            .replace(/\./g, "")
+
+                            .replace(",", ".")
+
+                            .trim()
+
+                    );
+
+
+                card.innerHTML = `
+
+                    <div class="product-image">
+
+                        <img
+                            src="${product.image}"
+                            alt="${product.name}"
+                            loading="lazy"
+                        >
+
+                    </div>
+
+
+                    <div class="product-info">
+
+                        <h3>
+                            ${product.name}
+                        </h3>
+
+                        <p>
+                            ${product.description}
+                        </p>
+
+                    </div>
+
+
+                    <div class="product-bottom">
+
+                        <strong>
+                            ${product.price}
+                        </strong>
+
+
+                        <button
+                            class="add-cart"
+                            type="button"
+                        >
+
+                            <i class="fa-solid fa-cart-shopping"></i>
+
+                            Adicionar
+
+                        </button>
+
+                    </div>
+
+                `;
+
+
+                productsGrid.appendChild(card);
+
+
+                const addButton =
+                    card.querySelector(".add-cart");
+
+
+                addButton.addEventListener(
+                    "click",
+                    function () {
+
+
+                        if (
+                            typeof addToCart !==
+                            "function"
+                        ) {
+
+                            console.error(
+                                "A função addToCart() não foi encontrada. Verifique o carrinho.js."
+                            );
+
+                            return;
+
+                        }
+
+
+                        addToCart({
+
+                            id:
+                                productId,
+
+                            name:
+                                product.name,
+
+                            description:
+                                product.description,
+
+                            price:
+                                numericPrice,
+
+                            image:
+                                product.image
+
+                        });
+
+
+                        const textoOriginal =
+                            addButton.innerHTML;
+
+
+                        addButton.innerHTML = `
+
+                            <i class="fa-solid fa-check"></i>
+
+                            Adicionado!
+
+                        `;
+
+
+                        addButton.classList.add(
+                            "added"
+                        );
+
+
+                        setTimeout(() => {
+
+                            addButton.innerHTML =
+                                textoOriginal;
+
+                            addButton.classList.remove(
+                                "added"
+                            );
+
+                        }, 1200);
+
+
+                    }
+                );
+
+            });
+
+        }
+
+
+
+        /* =================================================
+           TROCAR ANIMAL
+        ================================================= */
+
+        changeAnimal.addEventListener(
+            "click",
+            () => {
+
+
+                productsContent.hidden =
+                    true;
+
+
+                selectedAnimal =
+                    null;
+
+
+                selectedCategory =
+                    null;
+
+
+                animalButtons.forEach(button => {
+
+                    button.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+
+                subcategoryButtons.forEach(button => {
+
+                    button.classList.remove(
+                        "selected"
+                    );
+
+                });
+
+
+                productsGrid.innerHTML =
+                    "";
+
+
+                animalSelection.scrollIntoView({
+
+                    behavior: "smooth",
+
+                    block: "center"
+
+                });
+
+            }
+        );
+
+
+
+        /* =================================================
+           VOLTAR AO TOPO
+        ================================================= */
+
+        window.addEventListener(
+            "scroll",
+            () => {
+
+                if (window.scrollY > 500) {
+
+                    backToTop.classList.add(
+                        "show"
+                    );
+
+                } else {
+
+                    backToTop.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+        backToTop.addEventListener(
+            "click",
+            () => {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+
+        /* =================================================
+           SISTEMA DE USUÁRIO
+        ================================================= */
+
+        const userButton =
+            document.getElementById(
+                "user-button"
+            );
+
+
+        const userMenu =
+            document.getElementById(
+                "user-menu"
+            );
+
+
+        const logoutButton =
+            document.getElementById(
+                "logout-button"
+            );
+
+
+        const logoutModal =
+            document.getElementById(
+                "logout-modal"
+            );
+
+
+        const cancelLogout =
+            document.getElementById(
+                "cancel-logout"
+            );
+
+
+        const confirmLogout =
+            document.getElementById(
+                "confirm-logout"
+            );
+
+
+
+        /* =================================================
+           ATUALIZAR USUÁRIO
+        ================================================= */
+
+        function atualizarUsuario() {
+
+
+            const usuarioLogado =
+                localStorage.getItem(
+                    "usuarioLogado"
+                );
+
+
+            if (
+                usuarioLogado ===
+                "true"
+            ) {
+
+
+                userButton.innerHTML = `
+
+                    <img
+                        src="https://i.pravatar.cc/100?img=12"
+                        alt="Perfil"
+                        class="user-avatar"
+                    >
+
+                `;
+
+
+            } else {
+
+
+                userButton.innerHTML = `
+
+                    <i class="fa-regular fa-user"></i>
+
+                `;
+
+            }
+
+        }
+
+
+
+        /* =================================================
+           ABRIR / FECHAR MENU
+        ================================================= */
+
+        userButton.addEventListener(
+            "click",
+            function (event) {
+
+
+                event.stopPropagation();
+
+
+                const usuarioLogado =
+                    localStorage.getItem(
+                        "usuarioLogado"
+                    );
+
+
+                if (
+                    usuarioLogado !==
+                    "true"
+                ) {
+
+                    window.location.href =
+                        "login.html";
+
+                    return;
+
+                }
+
+
+                userMenu.classList.toggle(
+                    "show"
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           ABRIR MODAL DE DESCONEXÃO
+        ================================================= */
+
+        logoutButton.addEventListener(
+            "click",
+            function (event) {
+
+
+                event.stopPropagation();
+
+
+                userMenu.classList.remove(
+                    "show"
+                );
+
+
+                logoutModal.classList.add(
+                    "show"
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           CANCELAR DESCONEXÃO
+        ================================================= */
+
+        cancelLogout.addEventListener(
+            "click",
+            function () {
+
+                logoutModal.classList.remove(
+                    "show"
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           CONFIRMAR DESCONEXÃO
+        ================================================= */
+
+        confirmLogout.addEventListener(
+            "click",
+            function () {
+
+
+                localStorage.removeItem(
+                    "usuarioLogado"
+                );
+
+
+                logoutModal.classList.remove(
+                    "show"
+                );
+
+
+                userMenu.classList.remove(
+                    "show"
+                );
+
+
+                atualizarUsuario();
+
+            }
+        );
+
+
+
+        /* =================================================
+           CLICAR FORA DO MENU
+        ================================================= */
+
+        document.addEventListener(
+            "click",
+            function () {
+
+                userMenu.classList.remove(
+                    "show"
+                );
+
+            }
+        );
+
+
+
+        /* =================================================
+           FECHAR MODAL CLICANDO FORA
+        ================================================= */
+
+        logoutModal.addEventListener(
+            "click",
+            function (event) {
+
+
+                if (
+                    event.target ===
+                    logoutModal
+                ) {
+
+                    logoutModal.classList.remove(
+                        "show"
+                    );
+
+                }
+
+            }
+        );
+
+
+
+        /* =================================================
+           INICIALIZAÇÃO
+        ================================================= */
+
+        atualizarUsuario();
+
+
+        if (
+            typeof updateCartBadge ===
+            "function"
+        ) {
+
+            updateCartBadge();
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
