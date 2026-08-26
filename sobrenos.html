@@ -4,40 +4,34 @@
 
 <head>
 
-    ```
+    
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PetLândia</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS da página -->
     <link rel="stylesheet" href="sobrenos.css">
 
     <script src="carrinho.js"></script>
-    ```
+    
 
 </head>
 
 <body>
 
-    ```
-    <!-- =========================================
-     MENU DE NAVEGAÇÃO
-========================================== -->
+    
+    
 
     <header class="main-header">
 
         <div class="container header-content">
 
 
-            <!-- LOGO -->
 
             <div class="logo">
 
@@ -58,7 +52,6 @@
 
 
 
-            <!-- MENU -->
 
             <nav class="nav-menu">
 
@@ -76,7 +69,6 @@
 
 
 
-            <!-- USUÁRIO + CARRINHO -->
 
             <div class="header-actions">
 
@@ -123,16 +115,13 @@
 
 
 
-    <!-- =========================================
-     SOBRE NÓS
-========================================== -->
+   
 
     <main>
 
         <section class="sobre-nos">
 
 
-            <!-- TÍTULO -->
 
             <div class="titulo-sobre">
 
@@ -153,12 +142,10 @@
 
 
 
-            <!-- CARD PRINCIPAL -->
 
             <div class="sobre-card">
 
 
-                <!-- TEXTO -->
 
                 <div class="sobre-texto">
 
@@ -210,7 +197,6 @@
 
 
 
-                <!-- IMAGEM -->
 
                 <div class="sobre-imagem">
 
@@ -243,9 +229,7 @@
 
 
 
-    <!-- =========================================
-     MODAL DE DESCONEXÃO
-========================================== -->
+   
 
     <div id="logout-modal" class="logout-modal">
 
@@ -288,9 +272,7 @@
 
 
 
-    <!-- =========================================
-     JAVASCRIPT
-========================================== -->
+   
 
     <script>
 
@@ -313,9 +295,7 @@
             document.getElementById("confirm-logout");
 
 
-        /* =========================================
-           ATUALIZAR USUÁRIO
-        ========================================== */
+      
 
         function atualizarUsuario() {
 
@@ -348,9 +328,7 @@
         }
 
 
-        /* =========================================
-           ABRIR / FECHAR MENU
-        ========================================== */
+      
 
         userButton.addEventListener(
             "click",
@@ -378,9 +356,7 @@
         );
 
 
-        /* =========================================
-           ABRIR MODAL
-        ========================================== */
+      
 
         logoutButton.addEventListener(
             "click",
@@ -396,9 +372,7 @@
         );
 
 
-        /* =========================================
-           CANCELAR
-        ========================================== */
+       
 
         cancelLogout.addEventListener(
             "click",
@@ -410,9 +384,7 @@
         );
 
 
-        /* =========================================
-           CONFIRMAR DESCONEXÃO
-        ========================================== */
+       
 
         confirmLogout.addEventListener(
             "click",
@@ -432,9 +404,7 @@
         );
 
 
-        /* =========================================
-           CLICAR FORA DO MENU
-        ========================================== */
+        
 
         document.addEventListener(
             "click",
@@ -446,9 +416,7 @@
         );
 
 
-        /* =========================================
-           CLICAR FORA DO MODAL
-        ========================================== */
+       
 
         logoutModal.addEventListener(
             "click",
@@ -464,14 +432,11 @@
         );
 
 
-        /* =========================================
-           INICIALIZAÇÃO
-        ========================================== */
-
+        
         atualizarUsuario();
 
     </script>
-    ```
+    
 
 </body>
 
