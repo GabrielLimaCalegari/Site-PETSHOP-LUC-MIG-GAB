@@ -1,7 +1,3 @@
-/* =========================================
-CONFIGURAÇÕES DA PÁGINA
-========================================= */
-
 .servicos-hero {
 
     background: #eee5fa;
@@ -77,9 +73,6 @@ CONFIGURAÇÕES DA PÁGINA
     line-height: 1.6;
 }
 
-/* =========================================
-BENEFÍCIOS DO HERO
-========================================= */
 
 .hero-benefits {
 
@@ -128,9 +121,6 @@ BENEFÍCIOS DO HERO
     margin-top: 2px;
 }
 
-/* =========================================
-HERO - MAPA
-========================================= */
 
 .servicos-hero-image {
 
@@ -161,7 +151,6 @@ HERO - MAPA
         0 15px 40px rgba(91, 21, 157, 0.15);
 }
 
-/* mapa */
 
 .map-grid {
 
@@ -183,9 +172,6 @@ HERO - MAPA
     opacity: 0.65;
 }
 
-/* =========================================
-PINOS
-========================================= */
 
 .map-pin {
 
@@ -248,7 +234,6 @@ PINOS
     left: 220px;
 }
 
-/* cachorro ilustrativo */
 
 .pet-illustration {
 
@@ -282,9 +267,6 @@ PINOS
     color: #c79de9;
 }
 
-/* =========================================
-BUSCA
-========================================= */
 
 .busca-section {
 
@@ -317,7 +299,6 @@ BUSCA
         0 12px 35px rgba(83, 25, 145, 0.12);
 }
 
-/* títulos */
 
 .busca-card h2 {
 
@@ -328,7 +309,6 @@ BUSCA
     margin-bottom: 15px;
 }
 
-/* localização */
 
 .location-button {
 
@@ -409,7 +389,6 @@ BUSCA
     cursor: pointer;
 }
 
-/* opções */
 
 .service-options {
 
@@ -473,14 +452,12 @@ BUSCA
     color: #4d0c91;
 }
 
-/* botão de busca */
 .busca-action {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* botão */
 
 .btn-buscar {
 
@@ -522,9 +499,6 @@ BUSCA
     transform: translateY(-1px);
 }
 
-/* =========================================
-PARCEIROS
-========================================= */
 
 .parceiros-section {
 
@@ -588,7 +562,6 @@ PARCEIROS
     outline: none;
 }
 
-/* layout */
 
 .parceiros-layout {
 
@@ -602,10 +575,6 @@ PARCEIROS
 
     gap: 25px;
 }
-
-/* =========================================
-CARDS
-========================================= */
 
 .parceiros-lista {
 
@@ -648,7 +617,6 @@ CARDS
         0 12px 26px rgba(83, 25, 145, 0.1);
 }
 
-/* imagem */
 
 .parceiro-imagem {
 
@@ -694,7 +662,6 @@ CARDS
             #5521a2);
 }
 
-/* informações */
 
 .parceiro-selo {
 
@@ -803,7 +770,6 @@ CARDS
 
 }
 
-/* ações */
 
 .parceiro-actions {
 
@@ -864,9 +830,6 @@ CARDS
 
 }
 
-/* =========================================
-MAPA
-========================================= */
 
 .mapa-container {
 
@@ -895,7 +858,6 @@ MAPA
 
 }
 
-/* ruas */
 
 .mapa-grid {
 
@@ -924,7 +886,6 @@ MAPA
 
 }
 
-/* pontos */
 
 .mapa-ponto {
 
@@ -1052,7 +1013,6 @@ MAPA
 
 }
 
-/* caixa do mapa */
 
 .mapa-confianca {
 
@@ -1110,9 +1070,6 @@ MAPA
 
 }
 
-/* =========================================
-CONFIANÇA
-========================================= */
 
 .confianca-section {
 
@@ -1192,9 +1149,6 @@ CONFIANÇA
 
 }
 
-/* =========================================
-RESPONSIVIDADE
-========================================= */
 
 @media (max-width: 1100px) {
 
@@ -1386,9 +1340,6 @@ RESPONSIVIDADE
 
 }
 
-/* =========================================
-   MODAL - FUNÇÃO EM DESENVOLVIMENTO
-========================================= */
 
 .beta-modal {
 
@@ -1542,10 +1493,6 @@ RESPONSIVIDADE
 }
 
 
-/* =========================================
-   OPÇÕES DE SERVIÇO
-========================================= */
-
 .service-option {
 
     cursor: pointer;
@@ -1587,9 +1534,6 @@ RESPONSIVIDADE
 
 }
 
-/* =========================================
-   DETALHES DO PARCEIRO
-   ========================================= */
 
 .parceiro-detalhes {
     width: 100%;
@@ -1617,16 +1561,12 @@ RESPONSIVIDADE
     box-shadow: 0 12px 28px rgba(83, 25, 145, 0.08);
 }
 
-/* conteúdo interno */
 
 .detalhes-inner {
     padding: 25px 28px 20px;
     position: relative;
 }
 
-/* =========================================
-   CABEÇALHO
-   ========================================= */
 
 .detalhes-topo {
     display: flex;
@@ -1673,9 +1613,6 @@ RESPONSIVIDADE
     line-height: 1.2;
 }
 
-/* =========================================
-   BOTÃO FECHAR
-   ========================================= */
 
 .fechar-detalhes {
     flex-shrink: 0;
@@ -1709,10 +1646,6 @@ RESPONSIVIDADE
     transform: rotate(4deg);
 }
 
-/* =========================================
-   RESUMO
-   ========================================= */
-
 .detalhes-resumo {
     margin: 18px 0;
 
@@ -1722,9 +1655,6 @@ RESPONSIVIDADE
     max-width: 900px;
 }
 
-/* =========================================
-   GRID DE INFORMAÇÕES
-   ========================================= */
 
 .detalhes-grid {
     display: grid;
@@ -1757,7 +1687,6 @@ RESPONSIVIDADE
     transform: translateY(-1px);
 }
 
-/* ícone */
 
 .detalhes-icon {
     flex-shrink: 0;
@@ -1782,7 +1711,6 @@ RESPONSIVIDADE
     color: #d49700;
 }
 
-/* textos */
 
 .detalhes-item strong {
     display: block;
@@ -1802,9 +1730,6 @@ RESPONSIVIDADE
     line-height: 1.4;
 }
 
-/* =========================================
-   RODAPÉ
-   ========================================= */
 
 .detalhes-footer {
     margin-top: 18px;
@@ -1854,9 +1779,6 @@ RESPONSIVIDADE
     text-decoration: underline;
 }
 
-/* =========================================
-   AJUSTE NO CARD QUANDO O DETALHE ESTÁ ABERTO
-   ========================================= */
 
 .parceiro-card:has(+ .parceiro-detalhes.show) {
     border-color: #d9c5e9;
@@ -1868,9 +1790,6 @@ RESPONSIVIDADE
     transform: none;
 }
 
-/* =========================================
-   RESPONSIVIDADE
-   ========================================= */
 
 @media (max-width: 700px) {
 
