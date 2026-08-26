@@ -1,27 +1,12 @@
-/* =========================================
-   PETLÂNDIA - SISTEMA DE CARRINHO
-========================================= */
-
-
-/* =========================================
-   CONFIGURAÇÕES
-========================================= */
-
 const CART_KEY = "petlandiaCarrinho";
 
 
-// Frete padrão
 const FRETE = 19.90;
 
 
-// Valor mínimo para frete grátis
 const VALOR_FRETE_GRATIS = 99.00;
 
 
-
-/* =========================================
-   PEGAR CARRINHO
-========================================= */
 
 function getCart() {
 
@@ -47,9 +32,6 @@ function getCart() {
 
 
 
-/* =========================================
-   SALVAR CARRINHO
-========================================= */
 
 function saveCart(cart) {
 
@@ -62,10 +44,6 @@ function saveCart(cart) {
 
 
 
-/* =========================================
-   FORMATAR PREÇO
-========================================= */
-
 function formatPrice(value) {
 
     return value.toLocaleString("pt-BR", {
@@ -77,9 +55,6 @@ function formatPrice(value) {
 
 
 
-/* =========================================
-   ATUALIZAR BADGE
-========================================= */
 
 function updateCartBadge() {
 
@@ -102,10 +77,7 @@ function updateCartBadge() {
     badge.textContent = totalItems;
 
 
-    /*
-       Se não houver produtos,
-       podemos esconder o número.
-    */
+   
 
     if (totalItems === 0) {
 
@@ -121,18 +93,14 @@ function updateCartBadge() {
 
 
 
-/* =========================================
-   ADICIONAR PRODUTO
-========================================= */
+
 
 function addToCart(product) {
 
     const cart = getCart();
 
 
-    /*
-       Procuramos pelo ID.
-    */
+  
 
     const existingProduct = cart.find(
         item => item.id === product.id
@@ -169,9 +137,7 @@ function addToCart(product) {
     updateCartBadge();
 
 
-    /*
-       Pequeno aviso visual.
-    */
+  
 
     showCartNotification(
         product.name + " foi adicionado ao carrinho!"
@@ -181,9 +147,7 @@ function addToCart(product) {
 
 
 
-/* =========================================
-   REMOVER PRODUTO
-========================================= */
+
 
 function removeFromCart(productId) {
 
@@ -205,9 +169,7 @@ function removeFromCart(productId) {
 
 
 
-/* =========================================
-   ALTERAR QUANTIDADE
-========================================= */
+
 
 function changeQuantity(productId, change) {
 
@@ -227,10 +189,7 @@ function changeQuantity(productId, change) {
     product.quantity += change;
 
 
-    /*
-       Se chegar a zero,
-       removemos o produto.
-    */
+   
 
     if (product.quantity <= 0) {
 
@@ -251,9 +210,7 @@ function changeQuantity(productId, change) {
 
 
 
-/* =========================================
-   CALCULAR SUBTOTAL
-========================================= */
+
 
 function calculateSubtotal(cart) {
 
@@ -274,9 +231,7 @@ function calculateSubtotal(cart) {
 
 
 
-/* =========================================
-   CALCULAR FRETE
-========================================= */
+
 
 function calculateShipping(subtotal) {
 
@@ -287,9 +242,7 @@ function calculateShipping(subtotal) {
     }
 
 
-    /*
-       Frete grátis acima de R$ 99.
-    */
+   
 
     if (subtotal >= VALOR_FRETE_GRATIS) {
 
@@ -304,9 +257,7 @@ function calculateShipping(subtotal) {
 
 
 
-/* =========================================
-   RENDERIZAR CARRINHO
-========================================= */
+
 
 function renderCart() {
 
@@ -325,9 +276,7 @@ function renderCart() {
     const cart = getCart();
 
 
-    /*
-       CARRINHO VAZIO
-    */
+   
 
     if (cart.length === 0) {
 
@@ -350,9 +299,7 @@ function renderCart() {
     }
 
 
-    /*
-       CARRINHO COM PRODUTOS
-    */
+    
 
     cartItems.style.display = "block";
 
@@ -450,9 +397,7 @@ function renderCart() {
     });
 
 
-    /*
-       CONTADOR
-    */
+   
 
     const totalItems = cart.reduce(
         (total, product) => total + product.quantity,
@@ -470,9 +415,7 @@ function renderCart() {
     }
 
 
-    /*
-       ATUALIZA RESUMO
-    */
+    
 
     updateSummary(cart);
 
@@ -480,9 +423,6 @@ function renderCart() {
 
 
 
-/* =========================================
-   ATUALIZAR RESUMO
-========================================= */
 
 function updateSummary(cart) {
 
@@ -537,9 +477,7 @@ function updateSummary(cart) {
         formatPrice(total);
 
 
-    /*
-       MENSAGEM DO FRETE
-    */
+   
 
     if (shippingMessage) {
 
@@ -597,9 +535,7 @@ function updateSummary(cart) {
     }
 
 
-    /*
-       BOTÃO DE FINALIZAR
-    */
+   
 
     const checkoutButton =
         document.getElementById("checkoutButton");
@@ -616,17 +552,12 @@ function updateSummary(cart) {
 
 
 
-/* =========================================
-   NOTIFICAÇÃO
-========================================= */
+
 
 function showCartNotification(message) {
 
 
-    /*
-       Verifica se já existe
-    */
-
+   
     let notification =
         document.getElementById("cartNotification");
 
@@ -704,9 +635,6 @@ function showCartNotification(message) {
 
 
 
-/* =========================================
-   MODAL DE CHECKOUT
-========================================= */
 
 function openCheckoutModal() {
 
@@ -750,32 +678,23 @@ function closeCheckoutModal() {
 
 
 
-/* =========================================
-   INICIALIZAÇÃO
-========================================= */
 
 document.addEventListener(
     "DOMContentLoaded",
     function () {
 
 
-        /*
-           Atualiza o carrinho
-        */
+        
 
         renderCart();
 
 
-        /*
-           Atualiza número do carrinho
-        */
+        
 
         updateCartBadge();
 
 
-        /*
-           Botão finalizar compra
-        */
+       
 
         const checkoutButton =
             document.getElementById(
@@ -793,9 +712,7 @@ document.addEventListener(
         }
 
 
-        /*
-           Fechar modal
-        */
+        
 
         const closeModal =
             document.getElementById(
@@ -813,9 +730,7 @@ document.addEventListener(
         }
 
 
-        /*
-           Botão "Entendi"
-        */
+       
 
         const modalOk =
             document.getElementById(
@@ -833,9 +748,7 @@ document.addEventListener(
         }
 
 
-        /*
-           Clicar fora do modal
-        */
+        
 
         const modal =
             document.getElementById(
@@ -865,8 +778,5 @@ document.addEventListener(
 
 
 
-/* =========================================
-   ATUALIZAR BADGE EM OUTRAS PÁGINAS
-========================================= */
 
 updateCartBadge();
