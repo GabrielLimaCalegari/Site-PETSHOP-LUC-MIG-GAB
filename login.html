@@ -6,26 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    ```
+    
     <title>Login - PetLândia</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="login.css">
-    ```
+    
 
 </head>
 
 <body>
-
-    ```
+    
+    
     <main class="login-page">
 
         <div class="login-card">
 
-            <!-- Logo -->
             <div class="login-logo">
 
                 <div class="logo-paw">
@@ -43,17 +40,14 @@
             </div>
 
 
-            <!-- Título -->
             <div class="login-header">
                 <h2>Bem-vindo de volta!</h2>
                 <p>Entre na sua conta para continuar.</p>
             </div>
 
 
-            <!-- Formulário -->
             <form class="login-form" onsubmit="fazerLogin(event)">
 
-                <!-- E-mail -->
                 <div class="input-group">
 
                     <label for="email">E-mail</label>
@@ -69,7 +63,6 @@
                 </div>
 
 
-                <!-- Senha -->
                 <div class="input-group">
 
                     <div class="password-label">
@@ -95,7 +88,6 @@
                 </div>
 
 
-                <!-- Lembrar-me -->
                 <div class="remember">
 
                     <label>
@@ -106,7 +98,6 @@
                 </div>
 
 
-                <!-- Botão -->
                 <button type="submit" class="login-button">
                     Entrar
                     <i class="fa-solid fa-arrow-right"></i>
@@ -115,7 +106,6 @@
             </form>
 
 
-            <!-- Cadastro -->
             <div class="register">
 
                 <p>
@@ -126,7 +116,6 @@
             </div>
 
 
-            <!-- Voltar -->
             <div class="back-home">
 
                 <a href="index.html">
@@ -172,17 +161,14 @@
         function fazerLogin(event) {
             event.preventDefault();
 
-            // Pega os dados digitados
             const email = document.getElementById("email").value;
             const senha = document.getElementById("senha").value;
 
-            // Verifica se os campos foram preenchidos
             if (email === "" || senha === "") {
                 alert("Preencha seu e-mail e sua senha.");
                 return;
             }
 
-            // Login fictício por enquanto
             window.location.href = "index.html";
         }
     </script>
@@ -200,10 +186,8 @@
                 return;
             }
 
-            // Salva o estado de login
             localStorage.setItem("usuarioLogado", "true");
 
-            // Vai para a página inicial
             window.location.href = "index.html";
         }
     </script>
