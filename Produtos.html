@@ -9,16 +9,12 @@
 
     <title>PetLândia - Produtos</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS dos produtos -->
     <link rel="stylesheet" href="produtos.css">
 
-    <!-- Carrinho -->
     <script src="carrinho.js"></script>
 
 </head>
@@ -27,16 +23,11 @@
 <body>
 
 
-    <!-- =====================================================
-         MENU DE NAVEGAÇÃO
-    ====================================================== -->
-
     <header class="main-header">
 
         <div class="container header-content">
 
 
-            <!-- LOGO -->
 
             <div class="logo">
 
@@ -62,7 +53,6 @@
 
 
 
-            <!-- MENU -->
 
             <nav class="nav-menu">
 
@@ -104,14 +94,11 @@
 
 
 
-            <!-- =================================================
-                 USUÁRIO + CARRINHO
-            ================================================== -->
+           
 
             <div class="header-actions">
 
 
-                <!-- USUÁRIO -->
 
                 <div class="user-area">
 
@@ -122,7 +109,6 @@
                     </button>
 
 
-                    <!-- MENU DO USUÁRIO -->
 
                     <div id="user-menu" class="user-menu">
 
@@ -140,7 +126,6 @@
 
 
 
-                <!-- CARRINHO -->
 
                 <a href="carrinho.html" class="cart-icon" title="Carrinho">
 
@@ -161,9 +146,7 @@
 
 
 
-    <!-- =====================================================
-         HERO
-    ====================================================== -->
+   
 
     <section class="products-hero">
 
@@ -190,18 +173,14 @@
 
 
 
-    <!-- =====================================================
-         ÁREA PRINCIPAL
-    ====================================================== -->
+   
 
     <main class="products-area">
 
         <div class="products-container">
 
 
-            <!-- =================================================
-                 ESCOLHA DO ANIMAL
-            ================================================== -->
+           
 
             <section class="animal-selection" id="animalSelection">
 
@@ -221,7 +200,6 @@
                 <div class="animal-buttons">
 
 
-                    <!-- GATOS -->
 
                     <button class="animal-button" data-animal="gatos">
 
@@ -247,7 +225,6 @@
 
 
 
-                    <!-- CACHORROS -->
 
                     <button class="animal-button" data-animal="cachorros">
 
@@ -273,7 +250,6 @@
 
 
 
-                    <!-- TODOS -->
 
                     <button class="animal-button" data-animal="todos">
 
@@ -304,14 +280,11 @@
 
 
 
-            <!-- =================================================
-                 PRODUTOS
-            ================================================== -->
+            
 
             <section class="products-content" id="productsContent" hidden>
 
 
-                <!-- CABEÇALHO -->
 
                 <div class="selected-category-header">
 
@@ -340,7 +313,6 @@
 
 
 
-                <!-- SUBCATEGORIAS -->
 
                 <div class="subcategory-area">
 
@@ -394,7 +366,6 @@
 
 
 
-                <!-- TÍTULO -->
 
                 <div class="category-title">
 
@@ -416,7 +387,6 @@
 
 
 
-                <!-- PRODUTOS -->
 
                 <div class="products-grid" id="productsGrid">
                 </div>
@@ -431,9 +401,7 @@
 
 
 
-    <!-- =====================================================
-         VOLTAR AO TOPO
-    ====================================================== -->
+   
 
     <button id="backToTop" class="back-to-top" title="Voltar ao topo">
 
@@ -443,9 +411,7 @@
 
 
 
-    <!-- =====================================================
-         MODAL DE DESCONEXÃO
-    ====================================================== -->
+    
 
     <div id="logout-modal" class="logout-modal">
 
@@ -497,16 +463,12 @@
 
 
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
+   
 
     <script>
 
 
-        /* =================================================
-           PRODUTOS
-        ================================================= */
+        
 
         const products = {
 
@@ -1316,9 +1278,7 @@
 
 
 
-        /* =================================================
-           ELEMENTOS
-        ================================================= */
+       
 
         const animalButtons =
             document.querySelectorAll(".animal-button");
@@ -1349,9 +1309,7 @@
 
 
 
-        /* =================================================
-           VARIÁVEIS
-        ================================================= */
+       
 
         let selectedAnimal = null;
 
@@ -1359,10 +1317,7 @@
 
 
 
-        /* =================================================
-           NOMES
-        ================================================= */
-
+        
         const animalNames = {
 
             gatos:
@@ -1398,9 +1353,7 @@
 
 
 
-        /* =================================================
-           SELECIONAR ANIMAL
-        ================================================= */
+      
 
         animalButtons.forEach(button => {
 
@@ -1485,9 +1438,7 @@
 
 
 
-        /* =================================================
-           SELECIONAR SUBCATEGORIA
-        ================================================= */
+       
 
         subcategoryButtons.forEach(button => {
 
@@ -1552,9 +1503,7 @@
 
 
 
-        /* =================================================
-           RENDERIZAR PRODUTOS
-        ================================================= */
+       
 
         function renderProducts() {
 
@@ -1776,9 +1725,7 @@
 
 
 
-        /* =================================================
-           TROCAR ANIMAL
-        ================================================= */
+        
 
         changeAnimal.addEventListener(
             "click",
@@ -1832,9 +1779,7 @@
 
 
 
-        /* =================================================
-           VOLTAR AO TOPO
-        ================================================= */
+        
 
         window.addEventListener(
             "scroll",
@@ -1875,9 +1820,7 @@
 
 
 
-        /* =================================================
-           SISTEMA DE USUÁRIO
-        ================================================= */
+        
 
         const userButton =
             document.getElementById(
@@ -1916,9 +1859,7 @@
 
 
 
-        /* =================================================
-           ATUALIZAR USUÁRIO
-        ================================================= */
+        
 
         function atualizarUsuario() {
 
@@ -1961,9 +1902,7 @@
 
 
 
-        /* =================================================
-           ABRIR / FECHAR MENU
-        ================================================= */
+       
 
         userButton.addEventListener(
             "click",
@@ -2001,9 +1940,7 @@
 
 
 
-        /* =================================================
-           ABRIR MODAL DE DESCONEXÃO
-        ================================================= */
+       
 
         logoutButton.addEventListener(
             "click",
@@ -2027,9 +1964,7 @@
 
 
 
-        /* =================================================
-           CANCELAR DESCONEXÃO
-        ================================================= */
+        
 
         cancelLogout.addEventListener(
             "click",
@@ -2044,9 +1979,7 @@
 
 
 
-        /* =================================================
-           CONFIRMAR DESCONEXÃO
-        ================================================= */
+       
 
         confirmLogout.addEventListener(
             "click",
@@ -2075,9 +2008,7 @@
 
 
 
-        /* =================================================
-           CLICAR FORA DO MENU
-        ================================================= */
+       
 
         document.addEventListener(
             "click",
@@ -2092,9 +2023,7 @@
 
 
 
-        /* =================================================
-           FECHAR MODAL CLICANDO FORA
-        ================================================= */
+       
 
         logoutModal.addEventListener(
             "click",
@@ -2117,10 +2046,7 @@
 
 
 
-        /* =================================================
-           INICIALIZAÇÃO
-        ================================================= */
-
+       
         atualizarUsuario();
 
 
