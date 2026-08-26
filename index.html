@@ -4,37 +4,32 @@
 
 <head>
 
-    ```
+    
     <meta charset="UTF-8">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PetLândia</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
 
     <script src="carrinho.js"></script>
-    ```
+    
 
 </head>
 
 <body>
 
-    ```
-    <!-- =========================================
-     MENU DE NAVEGAÇÃO
-========================================== -->
+    
+  
 
     <header class="main-header">
 
         <div class="container header-content">
 
 
-            <!-- LOGO -->
 
             <div class="logo">
 
@@ -58,7 +53,6 @@
 
 
 
-            <!-- MENU -->
 
             <nav class="nav-menu">
 
@@ -76,14 +70,11 @@
 
 
 
-            <!-- =========================================
-             ÁREA DO USUÁRIO + CARRINHO
-        ========================================== -->
+            
 
             <div class="header-actions">
 
 
-                <!-- USUÁRIO -->
 
                 <div class="user-area">
 
@@ -94,7 +85,6 @@
                     </button>
 
 
-                    <!-- MENU DA FOTO -->
 
                     <div id="user-menu" class="user-menu">
 
@@ -112,7 +102,6 @@
 
 
 
-                <!-- CARRINHO -->
 
                 <a href="carrinho.html" class="cart-icon" title="Carrinho">
 
@@ -132,10 +121,7 @@
 
 
 
-    <!-- =========================================
-     BANNER DO CACHORRO
-========================================== -->
-
+    
     <section class="hero-banner">
 
         <div class="container hero-content">
@@ -176,10 +162,7 @@
 
 
 
-    <!-- =========================================
-     PROMOÇÕES E QUALIDADES
-========================================== -->
-
+   
     <section class="benefits-bar">
 
         <div class="container benefits-grid">
@@ -269,10 +252,7 @@
 
 
 
-    <!-- =========================================
-     CATEGORIAS
-========================================== -->
-
+    
     <section class="categories-section container">
 
 
@@ -400,9 +380,7 @@
 
 
 
-    <!-- =========================================
-     PRODUTOS DO SITE
-========================================== -->
+   
 
     <section class="products-section container">
 
@@ -426,7 +404,6 @@
         <div class="products-grid">
 
 
-            <!-- PRODUTO 1 -->
 
             <div class="product-card">
 
@@ -468,7 +445,6 @@
 
 
 
-            <!-- PRODUTO 2 -->
 
             <div class="product-card">
 
@@ -510,7 +486,6 @@
 
 
 
-            <!-- PRODUTO 3 -->
 
             <div class="product-card">
 
@@ -552,7 +527,6 @@
 
 
 
-            <!-- PRODUTO 4 -->
 
             <div class="product-card">
 
@@ -594,7 +568,6 @@
 
 
 
-            <!-- PRODUTO 5 -->
 
             <div class="product-card">
 
@@ -640,10 +613,7 @@
 
 
 
-    <!-- =========================================
-     MODAL DE DESCONEXÃO
-========================================== -->
-
+   
     <div id="logout-modal" class="logout-modal">
 
         <div class="logout-modal-content">
@@ -691,16 +661,12 @@
 
 
 
-    <!-- =========================================
-     JAVASCRIPT
-========================================== -->
+    
 
     <script>
 
 
-        /* =========================================
-           ELEMENTOS
-        ========================================== */
+       
 
         const userButton =
             document.getElementById("user-button");
@@ -727,9 +693,7 @@
 
 
 
-        /* =========================================
-           ATUALIZAR USUÁRIO
-        ========================================== */
+      
 
         function atualizarUsuario() {
 
@@ -767,10 +731,7 @@
 
 
 
-        /* =========================================
-           ABRIR / FECHAR MENU
-        ========================================== */
-
+       
         userButton.addEventListener(
             "click",
             function (event) {
@@ -802,9 +763,7 @@
 
 
 
-        /* =========================================
-           ABRIR MODAL DE DESCONEXÃO
-        ========================================== */
+       
 
         logoutButton.addEventListener(
             "click",
@@ -824,10 +783,7 @@
 
 
 
-        /* =========================================
-           CANCELAR DESCONEXÃO
-        ========================================== */
-
+      
         cancelLogout.addEventListener(
             "click",
             function () {
@@ -840,9 +796,7 @@
 
 
 
-        /* =========================================
-           CONFIRMAR DESCONEXÃO
-        ========================================== */
+        
 
         confirmLogout.addEventListener(
             "click",
@@ -867,9 +821,7 @@
 
 
 
-        /* =========================================
-           FECHAR MENU AO CLICAR FORA
-        ========================================== */
+        
 
         document.addEventListener(
             "click",
@@ -882,9 +834,7 @@
 
 
 
-        /* =========================================
-           FECHAR MODAL AO CLICAR FORA
-        ========================================== */
+       
 
         logoutModal.addEventListener(
             "click",
@@ -906,16 +856,11 @@
 
 
 
-        /* =========================================
-           INICIALIZAÇÃO
-        ========================================== */
+       
 
         atualizarUsuario();
 
-        /* =========================================
-   PRODUTOS EM DESTAQUE - CARRINHO
-========================================= */
-
+       
         const produtosDestaque = [
             {
                 id: "home-whiskas",
@@ -959,7 +904,6 @@
         ];
 
 
-        /* Pega os cards da seção de produtos em destaque */
 
         const cardsProdutosDestaque =
             document.querySelectorAll(".products-section .product-card");
@@ -987,11 +931,9 @@
                 "click",
                 function () {
 
-                    /* Adiciona ao sistema principal do carrinho */
                     addToCart(produto);
 
 
-                    /* Feedback visual no botão */
 
                     const textoOriginal = `
                 <i class="fa-solid fa-cart-shopping"></i>
@@ -1006,7 +948,6 @@
                     botaoAdicionar.classList.add("produto-adicionado");
 
 
-                    /* Volta ao botão normal depois de um tempo */
 
                     setTimeout(function () {
 
@@ -1026,7 +967,7 @@
 
 
     </script>
-    ```
+    
 
 </body>
 
