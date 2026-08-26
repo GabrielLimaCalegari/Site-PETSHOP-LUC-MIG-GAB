@@ -11,13 +11,10 @@
 
     <title>PetLândia</title>
 
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- CSS da página -->
     <link rel="stylesheet" href="serviços.css">
 
     <script src="carrinho.js"></script>
@@ -27,16 +24,13 @@
 
 <body>
 
-    <!-- =========================================
-     MENU DE NAVEGAÇÃO
-========================================== -->
+   
 
     <header class="main-header">
 
         <div class="container header-content">
 
 
-            <!-- LOGO -->
 
             <div class="logo">
 
@@ -57,7 +51,6 @@
 
 
 
-            <!-- MENU -->
 
             <nav class="nav-menu">
 
@@ -79,7 +72,6 @@
 
 
 
-            <!-- USUÁRIO + CARRINHO -->
 
             <div class="header-actions">
 
@@ -126,9 +118,7 @@
 
 
 
-    <!-- =========================================
-     HERO
-========================================== -->
+    
 
     <main>
 
@@ -259,16 +249,13 @@
 
 
 
-        <!-- =========================================
-         BUSCA
-    ========================================== -->
+      
 
         <section class="busca-section">
 
             <div class="busca-card">
 
 
-                <!-- LOCALIZAÇÃO -->
 
                 <div class="busca-local">
 
@@ -307,7 +294,6 @@
 
 
 
-                <!-- CATEGORIAS -->
 
                 <div class="busca-tipo">
 
@@ -355,7 +341,6 @@
                 </div>
 
 
-                <!-- BOTÃO -->
 
                 <div class="busca-action">
 
@@ -375,9 +360,7 @@
 
 
 
-        <!-- =========================================
-         PARCEIROS
-    ========================================== -->
+       
 
         <section class="parceiros-section">
 
@@ -425,12 +408,10 @@
             <div class="parceiros-layout">
 
 
-                <!-- LISTA -->
 
                 <div class="parceiros-lista">
 
 
-                    <!-- PARCEIRO 1 -->
 
                     <article class="parceiro-card" data-distance="1.2" data-rating="4.8" data-reviews="128"
                         data-name="Clínica Vet Vida"
@@ -517,7 +498,6 @@
                     <div class="parceiro-detalhes" aria-hidden="true"></div>
 
 
-                    <!-- PARCEIRO 2 -->
 
                     <article class="parceiro-card" data-distance="2.1" data-rating="4.7" data-reviews="96"
                         data-name="PetStyle Banho & Tosa"
@@ -604,7 +584,6 @@
                     <div class="parceiro-detalhes" aria-hidden="true"></div>
 
 
-                    <!-- PARCEIRO 3 -->
 
                     <article class="parceiro-card" data-distance="2.4" data-rating="4.6" data-reviews="210"
                         data-name="Mundo Animal Pet Shop"
@@ -694,7 +673,6 @@
 
 
 
-                <!-- MAPA -->
 
                 <div class="mapa-container">
 
@@ -781,9 +759,7 @@
 
 
 
-        <!-- =========================================
-         POR QUE USAR
-    ========================================== -->
+        
 
         <section class="confianca-section">
 
@@ -890,9 +866,7 @@
 
 
 
-    <!-- =========================================
-     MODAL DE DESCONEXÃO
-========================================== -->
+    
 
     <div id="logout-modal" class="logout-modal">
 
@@ -935,10 +909,7 @@
 
 
 
-    <!-- =========================================
-     MODAL - FUNÇÃO EM DESENVOLVIMENTO
-========================================== -->
-
+   
     <div id="beta-modal" class="beta-modal">
 
         <div class="beta-modal-content">
@@ -973,9 +944,7 @@
     </div>
 
 
-    <!-- =========================================
-     JAVASCRIPT
-========================================== -->
+  
 
     <script>
 
@@ -998,7 +967,6 @@
             document.getElementById("confirm-logout");
 
 
-        /* ATUALIZAR USUÁRIO */
 
         function atualizarUsuario() {
 
@@ -1031,7 +999,6 @@
         }
 
 
-        /* ABRIR MENU */
 
         userButton.addEventListener(
             "click",
@@ -1060,7 +1027,6 @@
         );
 
 
-        /* ABRIR MODAL */
 
         logoutButton.addEventListener(
             "click",
@@ -1076,7 +1042,6 @@
         );
 
 
-        /* CANCELAR */
 
         cancelLogout.addEventListener(
             "click",
@@ -1088,7 +1053,6 @@
         );
 
 
-        /* CONFIRMAR */
 
         confirmLogout.addEventListener(
             "click",
@@ -1108,7 +1072,6 @@
         );
 
 
-        /* CLICAR FORA */
 
         document.addEventListener(
             "click",
@@ -1120,7 +1083,6 @@
         );
 
 
-        /* FECHAR MODAL */
 
         logoutModal.addEventListener(
             "click",
@@ -1135,9 +1097,7 @@
             }
         );
 
-        /* =========================================
-           SELEÇÃO DOS SERVIÇOS
-        ========================================= */
+       
 
         const serviceOptions =
             document.querySelectorAll(".service-option");
@@ -1160,9 +1120,7 @@
         });
 
 
-        /* =========================================
-           MODAL DE FUNÇÃO EM DESENVOLVIMENTO
-        ========================================= */
+        
 
         const btnBuscarParceiros =
             document.getElementById("btnBuscarParceiros");
@@ -1197,9 +1155,7 @@
         });
 
 
-        /* =========================================
-           ORDENAÇÃO DOS PARCEIROS
-        ========================================= */
+        
 
         const ordenarParceiros =
             document.getElementById("ordenarParceiros");
@@ -1218,18 +1174,13 @@
 
         function ordenarListaParceiros() {
 
-            /*
-             * Guarda a posição atual da página.
-             * Assim a troca do select nunca faz a tela descer.
-             */
+           
             const scrollAtual = window.scrollY;
 
             const cards = Array.from(
                 parceirosLista.querySelectorAll(".parceiro-card")
             );
 
-            /* Remove os painéis antigos antes de reorganizar.
-               Isso evita que espaços vazios sejam criados na lista. */
             limparDetalhesDaLista();
 
             cards.sort(function (a, b) {
@@ -1263,7 +1214,6 @@
                 prepararDetalhes(card, detalhe);
             });
 
-            /* Impede qualquer alteração visual da posição da página. */
             window.scrollTo({
                 top: scrollAtual,
                 left: 0,
@@ -1272,9 +1222,7 @@
         }
 
 
-        /* =========================================
-           DETALHES DOS PARCEIROS
-        ========================================= */
+       
 
         function fecharTodosOsDetalhes() {
 
@@ -1410,20 +1358,14 @@
                 fechar.addEventListener("click", fecharDetalhe);
                 fecharTexto.addEventListener("click", fecharDetalhe);
 
-                /*
-                 * Não usamos scrollIntoView aqui.
-                 * O detalhe abre abaixo do card sem jogar a página para baixo.
-                 */
+               
             });
 
-            /* Como chegar usa o MESMO modal do Buscar parceiros. */
             botaoRota.addEventListener("click", abrirBetaModal);
         }
 
 
-        /* =========================================
-           PREPARAÇÃO INICIAL
-        ========================================= */
+        
 
         function criarDetalhe(card) {
 
@@ -1439,7 +1381,6 @@
 
         function prepararTodosOsCards() {
 
-            /* Garante que não existam painéis duplicados. */
             limparDetalhesDaLista();
 
             const cards = Array.from(
